@@ -10,10 +10,52 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_20_185515) do
+ActiveRecord::Schema.define(version: 2020_02_20_204459) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "blacklist_users", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "blacklist_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["blacklist_id"], name: "index_blacklist_users_on_blacklist_id"
+    t.index ["user_id"], name: "index_blacklist_users_on_user_id"
+  end
+
+  create_table "blacklists", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "website_name"
+    t.string "website_url"
+    t.string "description"
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "category"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "flashcard_users", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "flashcard_id"
+    t.boolean "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["flashcard_id"], name: "index_flashcard_users_on_flashcard_id"
+    t.index ["user_id"], name: "index_flashcard_users_on_user_id"
+  end
+
+  create_table "flashcards", force: :cascade do |t|
+    t.bigint "category_id"
+    t.string "question"
+    t.string "answer"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_flashcards_on_category_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -23,8 +65,15 @@ ActiveRecord::Schema.define(version: 2020_02_20_185515) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "first_name"
+    t.string "last_name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "blacklist_users", "blacklists"
+  add_foreign_key "blacklist_users", "users"
+  add_foreign_key "flashcard_users", "flashcards"
+  add_foreign_key "flashcard_users", "users"
+  add_foreign_key "flashcards", "categories"
 end
