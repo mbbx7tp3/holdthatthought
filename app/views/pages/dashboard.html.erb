@@ -52,8 +52,34 @@
       </div>
       <div class="dashboard-websites">
         <h2> <%= @user.first_name %>'s Blocked Websites </h2>
-        <a href="https://www.facebook.com/" target="_blank" class="fa fa-facebook"></a>
-        <a href="https://twitter.com/explore" target="_blank" class="fa fa-twitter"></a>
+        <div class= "card-container-dashnoard">
+<div class="card-product">
+  <img src="assets/facebook.png" />
+  <div class="card-product-infos">
+    <h2>Facebook</h2>
+  </div>
+</div>
+
+<div class="card-product">
+  <img src="assets/twitter.png" />
+  <div class="card-product-infos">
+    <h2>Twitter</h2>
+  </div>
+</div>
+
+<div class="card-product">
+  <img src="assets/bbcnews.png" />
+  <div class="card-product-infos">
+    <h2>BBC News</h2>
+  </div>
+</div>
+
+<div class="card-product">
+  <img src="assets/instagram.png" />
+  <div class="card-product-infos">
+    <h2>Instgram</h2>
+  </div>
+</div>
       </div>
       <div class="dashboard-learning">
         <h2> <%= @user.first_name %> here are your learning topics </h2>
