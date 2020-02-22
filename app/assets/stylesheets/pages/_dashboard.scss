@@ -43,7 +43,8 @@ button {
     flex: auto;
     display: flex;
     flex-direction: column;
-    padding-left: 10px;
+    padding-left: 20px;
+
 
 }
 
@@ -51,3 +52,36 @@ button {
   text-align: center;
   padding-top: 20px;
 }
+
+.dashboard-websites {
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.dashboard-learning, .Subscription-details, .Account-Setting, .Your-Devices {
+  margin-top: 20px;
+}
+
+
+
