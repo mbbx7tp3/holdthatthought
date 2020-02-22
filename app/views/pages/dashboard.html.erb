@@ -1,6 +1,6 @@
 <body>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<h2 style="text-align: center; margin-top: 20px;">  Hi <%= @user.first_name %> here is your dashboard </h2>
+<h1 style="text-align: center; margin-top: 20px; font-family: Noto Serif JP;">  Hi <%= @user.first_name %> here is your dashboard </h1>
 
 <div class="dashboard-layout">
   <main class="dashboard-layout-main">
@@ -45,13 +45,13 @@
     </aside>
     <div class="dashboard-layout-right">
       <div class="Your-stats">
-        <h2> <%= @user.first_name %> Stats </h2>
-        <p> Times Blocked: 7 </p>
+        <h1 style= 'font-family: Noto Serif JP'> <%= @user.first_name %> Stats </h1>
+        <p style="margin-top: 10px"> Times Blocked: 7 </p>
         <p> Flash Cards Answered: 21</p>
         <p> Time Saved: 1 Hour and 2 Minutes </p>
       </div>
       <div class="dashboard-websites">
-        <h2> <%= @user.first_name %>'s Blocked Websites </h2>
+        <h1 style= 'font-family: Noto Serif JP'> <%= @user.first_name %>'s Blocked Websites </h1>
         <div class= "card-container-dashboard">
           <div class="card-product-dashboard">
             <img src="assets/facebook.png" />
@@ -84,7 +84,7 @@
       </div>
 
       <div class="dashboard-learning">
-        <h2> <%= @user.first_name %> here are your learning topics </h2>
+        <h1 style= 'font-family: Noto Serif JP'> <%= @user.first_name %> here are your learning topics </h1>
           <div class= "card-container-dashboard">
             <div class="card-product-dashboard">
               <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" />
@@ -97,18 +97,18 @@
       </div>
 
       <div class="Subscription-details">
-        <h2> <%= @user.first_name %>'s Subcription Details </h2>
+        <h1 style= 'font-family: Noto Serif JP'> <%= @user.first_name %>'s Subcription Details </h1>
          You are on our free plan
       </div>
       <div class="Account-Setting">
-        <h2> <%= @user.first_name %>'s Account details </h2>
+        <h1 style= 'font-family: Noto Serif JP'> <%= @user.first_name %>'s Account details </h1>
         <p> First Name: <%= @user.first_name %> </p>
         <p> Last Name: <%= @user.last_name %> </p>
         <p> Email: <%= @user.email %></p>
         <%= link_to "Edit Account Details", edit_user_registration_path, class: "btn btn-info btn-xs" %>
       </div>
       <div class="Your-Devices">
-        <h2> <%= @user.first_name %> Blocked Devices </h2>
+        <h1 style= 'font-family: Noto Serif JP'> <%= @user.first_name %> Blocked Devices </h1>
           <p><%= @user.first_name %> iPhone </p>
           <p><%= @user.first_name %> Mac </p>
       </div>
