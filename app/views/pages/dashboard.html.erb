@@ -52,39 +52,50 @@
       </div>
       <div class="dashboard-websites">
         <h2> <%= @user.first_name %>'s Blocked Websites </h2>
-        <div class= "card-container-dashnoard">
-<div class="card-product">
-  <img src="assets/facebook.png" />
-  <div class="card-product-infos">
-    <h2>Facebook</h2>
-  </div>
-</div>
+        <div class= "card-container-dashboard">
+          <div class="card-product-dashboard">
+            <img src="assets/facebook.png" />
+            <div class="card-product-infos">
+              <h2>Facebook</h2>
+            </div>
+          </div>
 
-<div class="card-product">
-  <img src="assets/twitter.png" />
-  <div class="card-product-infos">
-    <h2>Twitter</h2>
-  </div>
-</div>
+          <div class="card-product-dashboard">
+            <img src="assets/twitter.png" />
+            <div class="card-product-infos">
+              <h2>Twitter</h2>
+            </div>
+          </div>
 
-<div class="card-product">
-  <img src="assets/bbcnews.png" />
-  <div class="card-product-infos">
-    <h2>BBC News</h2>
-  </div>
-</div>
+          <div class="card-product-dashboard">
+            <img src="assets/bbcnews.png" />
+            <div class="card-product-infos">
+              <h2>BBC News</h2>
+            </div>
+          </div>
 
-<div class="card-product">
-  <img src="assets/instagram.png" />
-  <div class="card-product-infos">
-    <h2>Instgram</h2>
-  </div>
-</div>
+          <div class="card-product-dashboard">
+            <img src="assets/instagram.png" />
+            <div class="card-product-infos">
+              <h2>Instgram</h2>
+            </div>
+          </div>
+        </div>
       </div>
+
       <div class="dashboard-learning">
         <h2> <%= @user.first_name %> here are your learning topics </h2>
-        Coding
+          <div class= "card-container-dashboard">
+            <div class="card-product-dashboard">
+              <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" />
+              <div class="card-product-infos">
+                <h2>Le Wagon</h2>
+                <p>Change your life, learn to code</p>
+              </div>
+            </div>
+          </div>
       </div>
+
       <div class="Subscription-details">
         <h2> <%= @user.first_name %>'s Subcription Details </h2>
          You are on our free plan
