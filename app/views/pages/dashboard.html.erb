@@ -1,11 +1,49 @@
-<h2 style="text-align: center; margin-top: 20px;">  Hi <%= @user.first_name %> this is your dashboard </h2>
+<h2 style="text-align: center; margin-top: 20px;">  Hi <%= @user.first_name %> here is your dashboard </h2>
 
 <div class="dashboard-layout">
   <main class="dashboard-layout-main">
-    <aside>
-
-
-
+    <aside class="dashboard-sidebar">
+      <div class="dashboard-sidebar-container">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active" style="padding-bottom: 10px;">
+          <%= link_to  "Blocked Websites", class: "dropdown-item"%>
+          </li>
+        </ul>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active" style="padding-bottom: 10px;">
+          <%= link_to  "What are you learning", class: "dropdown-item"%>
+          </li>
+        </ul>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active" style="padding-bottom: 10px;">
+          <%= link_to  "Subscription Details", class: "dropdown-item"%>
+          </li>
+        </ul>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active" style="padding-bottom: 10px;">
+          <%= link_to  "Account Settings", class: "dropdown-item"%>
+          </li>
+        </ul>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active" style="padding-bottom: 10px;">
+          <%= link_to  "Your Devices", class: "dropdown-item"%>
+          </li>
+        </ul>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active" style="padding-bottom: 10px;">
+          <%= link_to "Contact Us", class: "dropdown-item"%>
+          </li>
+        </ul>
+      </div>
     </aside>
+    <div class="dashboard-layout-right">
+      <h2> <%= @user.first_name %> Blocked Websites </h2>
+    </div>
   </main>
+          <div class=logout-button>
+          <ul class="nav-item active" style="padding-bottom: 10px;">
+          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn btn-info btn-lg" %>
+          </ul>
+          </div>
+
 </div>

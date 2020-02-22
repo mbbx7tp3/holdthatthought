@@ -4,3 +4,50 @@
     flex: 1 0 0;
     overflow: auto;
 }
+
+button {
+  color: inherit;
+    font: inherit;
+}
+
+.dashboard-layout-main {
+    width: 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1 0 auto;
+    flex-direction: row;
+    padding-top: 40px;
+}
+
+.dashboard-sidebar {
+    width: 240px;
+    flex: 0 0 240px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+    z-index: 20;
+}
+
+.dashboard-sidebar-container {
+  position: sticky;
+  top: 40px;
+}
+
+.dashboard-layout-right {
+    position: relative;
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+
+}
+
+.logout-button {
+  text-align: center;
+  padding-top: 20px;
+}
