@@ -44,6 +44,7 @@ button {
     display: flex;
     flex-direction: column;
     padding-left: 20px;
+    padding-right: 50px;
 
 
 }
@@ -83,9 +84,31 @@ button {
   margin-top: 20px;
 }
 
-.card-container-dashnoard {
+.card-container-dashboard {
   display: flex;
   justify-content: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  margin:-10px;
+}
+.card-container-dashboard>* {
+        flex: 1 1;
+        margin: 10px;
+      }
+
+.card-product-dashboard img {
+  padding: 10px;
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
 }
 
+.card-product-dashboard {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  width: 300px;
+}
