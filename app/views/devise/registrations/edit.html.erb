@@ -21,7 +21,10 @@
                 hint: "we need your current password to confirm your changes",
                 required: true,
                 input_html: { autocomplete: "current-password" } %>
+    <%#= f.association :blacklists, label_method: :website_name, as: :check_boxes %>
   </div>
+
+  <%#= render 'blacklist_users/edit' %>
 
   <div class="form-actions">
     <%= f.button :submit, "Update" %>

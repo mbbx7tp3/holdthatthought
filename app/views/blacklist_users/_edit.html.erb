@@ -1,0 +1,3 @@
+<%= simple_form_for(@blacklist_user) do |f| %>
+  <%= f.association :blacklists, label_method: :website_name, as: :check_boxes %>
+<% end %>
