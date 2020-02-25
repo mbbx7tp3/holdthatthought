@@ -6,41 +6,31 @@
   <main class="dashboard-layout-main">
     <aside class="dashboard-sidebar">
       <div class="dashboard-sidebar-container">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active" style="padding-bottom: 10px;">
-          <%= link_to  "Your Stats", class: "dropdown-item"%>
-          </li>
-        </ul>
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active" style="padding-bottom: 10px;">
-          <%= link_to  "Blocked Websites", class: "dropdown-item"%>
-          </li>
-        </ul>
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active" style="padding-bottom: 10px;">
-          <%= link_to  "What are you learning", class: "dropdown-item"%>
-          </li>
-        </ul>
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active" style="padding-bottom: 10px;">
-          <%= link_to  "Subscription Details", class: "dropdown-item"%>
-          </li>
-        </ul>
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active" style="padding-bottom: 10px;">
-          <%= link_to  "Account Settings", class: "dropdown-item"%>
-          </li>
-        </ul>
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active" style="padding-bottom: 10px;">
-          <%= link_to  "Your Devices", class: "dropdown-item"%>
-          </li>
-        </ul>
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active" style="padding-bottom: 10px;">
-          <%= link_to "Contact Us", class: "dropdown-item"%>
-          </li>
-        </ul>
+        <div class="tab">
+          <button class="tablinks" onclick="openPage(event, 'YourStats')" id="defaultOpen">Your Stats</button>
+          <button class="tablinks" onclick="openPage(event, 'BlockedWebsites')"> Blocked Websites</button>
+          <button class="tablinks" onclick="openPage(event, 'Learning')"> Learning Topics </button>
+          <button class="tablinks" onclick="openPage(event, 'Subscription')"> Subscriptions </button>
+          <button class="tablinks" onclick="openPage(event, 'Settings')"> Account Settings </button>
+        </div>
+
+
+
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active" style="padding-bottom: 10px;">
+            <%= link_to  "Account Settings", class: "dropdown-item"%>
+            </li>
+          </ul>
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active" style="padding-bottom: 10px;">
+            <%= link_to  "Your Devices", class: "dropdown-item"%>
+            </li>
+          </ul>
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active" style="padding-bottom: 10px;">
+            <%= link_to "Contact Us", class: "dropdown-item"%>
+            </li>
+          </ul>
       </div>
     </aside>
     <div class="dashboard-layout-right">
@@ -122,4 +112,21 @@
   </div>
 
 </div>
+<script>
+function openPage(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+  document.getElementById("defaultOpen").click();
+</script>
 </body>
