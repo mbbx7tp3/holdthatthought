@@ -6,8 +6,7 @@
 }
 
 button {
-  color: inherit;
-    font: inherit;
+  margin-top: 10px;
 }
 
 .dashboard-layout-main {
@@ -45,44 +44,8 @@ button {
     flex-direction: column;
     padding-left: 20px;
     padding-right: 50px;
-
-
 }
 
-.logout-button {
-  text-align: center;
-  padding-top: 20px;
-}
-
-.dashboard-websites {
-}
-
-.fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-}
-
-.fa:hover {
-  opacity: 0.7;
-}
-
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-
-}
-
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
-}
-
-.dashboard-learning, .Subscription-details, .Account-Setting, .Your-Devices {
-  margin-top: 20px;
-}
 
 .card-container-dashboard {
   display: flex;
@@ -111,4 +74,45 @@ button {
   display: flex;
   align-items: center;
   width: 300px;
+}
+
+.tab {
+  overflow: hidden;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+}
+
+.tabcontent {
+  animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
