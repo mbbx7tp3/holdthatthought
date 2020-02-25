@@ -51,12 +51,12 @@ puts "Created 4 blacklist websites..."
 
 # Assign blacklist websites to users
 
-BlacklistUser.create(user: User.find(1), blacklist: Blacklist.find(1))
-BlacklistUser.create(user: User.find(2), blacklist: Blacklist.find(2))
-BlacklistUser.create(user: User.find(3), blacklist: Blacklist.find(3))
-BlacklistUser.create(user: User.find(4), blacklist: Blacklist.find(4))
+# BlacklistUser.create(user: User.find(1), blacklist: Blacklist.find(1))
+# BlacklistUser.create(user: User.find(2), blacklist: Blacklist.find(2))
+# BlacklistUser.create(user: User.find(3), blacklist: Blacklist.find(3))
+# BlacklistUser.create(user: User.find(4), blacklist: Blacklist.find(4))
 
-puts "Assigned blacklist websites to users..."
+# puts "Assigned blacklist websites to users..."
 
 # FLASHCARDS
 

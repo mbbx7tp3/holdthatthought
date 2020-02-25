@@ -27,6 +27,20 @@
   </div>
 </div>
 
+<h3>What would you like to learn?</h3>
+
+<%= simple_form_for(@user, url: user_registration_path) do |f| %>
+  <%= f.input :interest, as: :check_boxes, collection: User::LEARNING_OPTIONS %>
+<% end %>
+
+
+<h3>What would you like to avoid?</h3>
+
+<%= simple_form_for(@blacklist_user, url: blacklist_users_create_path) do |f| %>
+  <%= f.input :blacklist, as: :check_boxes, collection: @blacklist_options %>
+  <%= f.button :submit, class:"btn btn-primary" %>
+<% end %>
+
 <div class= "card-container">
 <div class="card-product">
   <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" />
