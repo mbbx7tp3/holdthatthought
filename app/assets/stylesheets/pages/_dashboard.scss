@@ -78,6 +78,7 @@ button a {
   margin-top: 20px;
 }
 
+
 .tab {
   overflow: hidden;
 }
@@ -107,6 +108,10 @@ button a {
 .tabcontent {
   display: none;
   padding: 6px 12px;
+}
+
+.tabcontent a {
+ color: black;
 }
 
 .tabcontent {
