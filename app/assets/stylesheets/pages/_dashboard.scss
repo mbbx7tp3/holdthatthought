@@ -9,6 +9,10 @@ button {
   margin-top: 10px;
 }
 
+button a {
+  color: black;
+}
+
 .dashboard-layout-main {
     width: 100%;
     max-width: 1440px;
@@ -54,10 +58,7 @@ button {
   flex-wrap: wrap;
   margin:-10px;
 }
-.card-container-dashboard>* {
-        flex: 1 1;
-        margin: 10px;
-      }
+
 
 .card-product-dashboard img {
   padding: 10px;
@@ -74,7 +75,9 @@ button {
   display: flex;
   align-items: center;
   width: 300px;
+  margin-top: 20px;
 }
+
 
 .tab {
   overflow: hidden;
@@ -105,6 +108,10 @@ button {
 .tabcontent {
   display: none;
   padding: 6px 12px;
+}
+
+.tabcontent a {
+ color: black;
 }
 
 .tabcontent {
