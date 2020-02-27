@@ -6,4 +6,7 @@ class Blacklist < ApplicationRecord
     website_name
   end
 
+  def edit
+  end
+
 end

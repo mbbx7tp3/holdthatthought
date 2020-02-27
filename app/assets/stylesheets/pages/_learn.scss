@@ -1,0 +1,27 @@
+
+
+.card-product-learn {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  width: 300px;
+  margin: auto;
+
+}
+
+.card-product-learn img {
+  padding: 10px;
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-container-learn {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  margin-top: 40px;
+}
