@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  patch 'users/update'
   post 'blacklist_users/create'
   get 'blacklist_users/edit'
   get 'blacklist_users/learn'
