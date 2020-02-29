@@ -1,4 +1,11 @@
 class UsersController < ApplicationController
+
+
+  def user_params
+      params.require(:user).permit(:photo)
+  end
+
+
   def update
     @user = current_user
     @blacklist_ids = params["user"]["blacklist_ids"].drop(1)
@@ -15,4 +22,5 @@ class UsersController < ApplicationController
     raise
 
   end
+
 end
