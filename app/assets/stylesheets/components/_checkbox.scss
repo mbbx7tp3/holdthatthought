@@ -18,7 +18,8 @@
     cursor: pointer;
   }
   &.active {
-  background: $brand-primary;
+  background: red;
   color: white;
   opacity: 1;
   }
+}
