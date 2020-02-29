@@ -102,10 +102,8 @@
 
       <div id="Settings" class="tabcontent">
         <h1 style= 'font-family: Noto Serif JP; margin-bottom: 20px;'> <%= @user.first_name %>'s Account details </h1>
-        <p> First Name: <%= @user.first_name %> </p>
-        <p> Last Name: <%= @user.last_name %> </p>
+        <p> Name: <%= @user.first_name %> <%= @user.last_name %>  </p>
         <p> Email: <%= @user.email %></p>
-        <p> <%= cl_image_tag @user.photo.key, width: 400, height: 300, crop: :fill %> </p>
         <%= link_to "Edit Your Account Details", edit_user_registration_path, class: "btn btn-info btn-xs"%>
       </div>
 
