@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   get 'dashboard', to: "pages#dashboard", as: :dashboard
+  get "payment" , to: "pages#payment", as: :payment
+
 
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
@@ -13,6 +15,6 @@ Rails.application.routes.draw do
       resources :flashcards, only: [ :index, :show, :update ]
     end
   end
-  
-  get 'test', to: "pages#test", as: :test
+
+
 end
