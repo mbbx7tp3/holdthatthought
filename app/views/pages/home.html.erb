@@ -62,7 +62,7 @@
 
 <h3>What would you like to avoid?</h3>
 
-<%= simple_form_for(@user, url: user_registration_path,method: :patch) do |f| %>
+<%= simple_form_for(@user, url: users_update_path, method: :patch) do |f| %>
 
   <div class="form-group">
     <input type="hidden" name="user[blacklist_ids][]" value="">
