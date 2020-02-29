@@ -9,6 +9,7 @@ class User < ApplicationRecord
   has_many :flashcards, through: :flashcard_users
   has_many :blacklist_users
   has_many :blacklists, through: :blacklist_users
+  has_one_attached :photo
 
   LEARNING_OPTIONS = [
     "Le Wagon",

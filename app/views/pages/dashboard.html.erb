@@ -7,6 +7,7 @@
     <aside class="dashboard-sidebar">
       <div class="dashboard-sidebar-container">
         <div class="tab">
+          <button class="tablinks" onclick="openPage(event, 'Download')" id="defaultOpen"> Download </button>
           <button class="tablinks" onclick="openPage(event, 'YourStats')">Your Stats </button>
           <button class="tablinks" onclick="openPage(event, 'BlockedWebsites')"> Blocked Websites</button>
           <button class="tablinks" onclick="openPage(event, 'Learning')"> Learning Topics </button>
@@ -19,6 +20,17 @@
       </div>
     </aside>
     <div class="dashboard-layout-right">
+
+      <div id="Download" class="tabcontent">
+
+        <div class="container" style="text-align: center; margin-top: 40px">
+        <img src="https://www.darrelwilson.com/wp-content/uploads/2018/11/crome-extention.jpg"/ style="width: 800px">
+        </div>
+        <div style="margin-top: 50px;">
+        <a href="https://chrome.google.com/webstore/category/extensions" target="_blank" style="text-align: center;"> <h2>Download Hold That Thought Crome Extension</h2> </a>
+        </div>
+      </div>
+
       <div id="YourStats" class="tabcontent">
         <h1 style= 'font-family: Noto Serif JP; margin-bottom: 20px;'> <%= @user.first_name %> Stats </h1>
         <p> You were blocked 7 times </p>
@@ -58,7 +70,7 @@
             </div>
           </div>
         <div style="margin-top: 30px;">
-        <%= link_to "Edit Blocked Websites", edit_user_registration_path, class: "btn btn-info btn-xs" %>
+        <%= link_to "Edit Blocked Websites", blacklist_users_edit_path, class: "btn btn-info btn-xs" %>
         </div>
       </div>
 
@@ -76,7 +88,7 @@
             </div>
           </div>
         <div style="margin-top: 30px;">
-        <%= link_to "Edit Your Learning Topics", edit_user_registration_path, class: "btn btn-info btn-xs" %>
+        <%= link_to "Edit Your Learning Topics", blacklist_users_learn_path, class: "btn btn-info btn-xs" %>
         </div>
       </div>
 
@@ -90,8 +102,7 @@
 
       <div id="Settings" class="tabcontent">
         <h1 style= 'font-family: Noto Serif JP; margin-bottom: 20px;'> <%= @user.first_name %>'s Account details </h1>
-        <p> First Name: <%= @user.first_name %> </p>
-        <p> Last Name: <%= @user.last_name %> </p>
+        <p> Name: <%= @user.first_name %> <%= @user.last_name %>  </p>
         <p> Email: <%= @user.email %></p>
         <%= link_to "Edit Your Account Details", edit_user_registration_path, class: "btn btn-info btn-xs"%>
       </div>

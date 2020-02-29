@@ -1,0 +1,46 @@
+<h1 style="text-align: center; margin-top: 20px; font-family: Noto Serif JP;">  Hi <%= @user.first_name %> here are your learning topics </h1>
+
+
+          <div class= "card-container-learn">
+            <div class="card-product-learn" style="width: 500px;">
+              <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png"/>
+              <div class="card-product-infos">
+                <h2>Le Wagon</h2>
+                <p>Change your life, learn to code</p>
+              </div>
+            </div>
+          </div>
+
+<h1 style="text-align: center; margin-top: 20px; font-family: Noto Serif JP;"> Do you want to learn any new topics </h1>
+
+<div class= "card-container-learn">
+<div class="card-product">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" />
+  <div class="card-product-infos">
+    <h2>Le Wagon</h2>
+    <p>Change your life, learn to code</p>
+  </div>
+</div>
+
+<div class="card-product">
+  <img src="/assets/duo.png" />
+  <div class="card-product-infos">
+    <h2>Duo Lingo</h2>
+    <p>The worlds best way to learn a language</p>
+  </div>
+</div>
+
+<div class="card-product">
+  <img src="/assets/elevate.png" />
+  <div class="card-product-infos">
+    <h2>Elevate</h2>
+    <p>Stay sharp, build confidence, and boost productivity</p>
+  </div>
+</div>
+</div>
+
+
+        <div style="margin-top: 30px; text-align: center;">
+        <%= link_to "Add another learning topic", "/dashboard", class: "btn btn-info btn-xs" %>
+        </div>
+

@@ -7,4 +7,13 @@ class BlacklistUsersController < ApplicationController
       BlacklistUser.create(user: @user, blacklist: new_blacklist)
     end
   end
+
+  def edit
+  @user = current_user
+  end
+
+  def learn
+  @user = current_user
+  end
+
 end
