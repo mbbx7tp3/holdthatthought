@@ -5,8 +5,9 @@ class PagesController < ApplicationController
     else
       @user = User.new
     end
-    @blacklist_user = BlacklistUser.new
-    @blacklist_options = Blacklist.all
+    # @blacklist_user = BlacklistUser.new
+
+    # @blacklist_options = Blacklist.all
   end
 
   def dashboard
