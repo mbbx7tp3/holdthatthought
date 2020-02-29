@@ -1,4 +1,5 @@
 
+<!-- header and banner -->
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <a class="navbar-brand" href="/dashboard">
     <i class="far fa-lightbulb" style= "font-size: 26px;"></i>
@@ -27,19 +28,53 @@
   </div>
 </div>
 
+
+<!-- forms -->
+
 <h3>What would you like to learn?</h3>
 
 <%= simple_form_for(@user, url: user_registration_path) do |f| %>
+<div class="category-choices">
+    <% User::LEARNING_OPTIONS.each do |category| %>
+      <input type="checkbox" class="hidden" >
+      <img src="" alt="">
+      <label class= "catagory-choice" >
+        <%= category %>
+        <i class="fa fa-check"></i>
+      </label>
+    <% end %>
+   </div>
+
   <%= f.input :interest, as: :check_boxes, collection: User::LEARNING_OPTIONS %>
+  <%= f.button :submit, class:"btn btn-primary" %>
+
 <% end %>
 
 
 <h3>What would you like to avoid?</h3>
 
+<%= simple_form_for(@user, url: user_registration_path) do |f| %>
+<div class="category-choices">
+    <% User::LEARNING_OPTIONS.each do |category| %>
+      <input type="checkbox" class="hidden" >
+      <img src="" alt="">
+      <label class= "catagory-choice" >
+        <%= category %>
+        <i class="fa fa-check"></i>
+      </label>
+    <% end %>
+   </div>
+  <% end %>
+
 <%= simple_form_for(@blacklist_user, url: blacklist_users_create_path) do |f| %>
-  <%= f.input :blacklist, as: :check_boxes, collection: @blacklist_options %>
+  <%= f.input :blacklist, class: "blacklist-form", as: :check_boxes, collection: @blacklist_options %>
   <%= f.button :submit, class:"btn btn-primary" %>
 <% end %>
+
+
+
+
+<!-- cards -->
 
 <div class= "card-container">
 <div class="card-product">
@@ -96,7 +131,7 @@
 <div class="card-product">
   <img src="assets/instagram.png" />
   <div class="card-product-infos">
-    <h2>Instgram</h2>
+    <h2>Instagram</h2>
   </div>
 </div>
 </div>
