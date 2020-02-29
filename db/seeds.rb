@@ -115,5 +115,13 @@ end",
 
 puts "Created 5 flashcards..."
 
+
+puts "creating plans"
+
+Plan.create!(name: free, price: 0)
+Plan.create!(name: medium, price_cents: 99)
+Plan.create!(name: full, price_cents: 499)
+
+
 puts "Seeding completed!"
 
