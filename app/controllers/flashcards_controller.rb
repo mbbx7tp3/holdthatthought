@@ -1,2 +1,3 @@
-class FlashcardsController < ApplicationController
+class Api::V1::FlashcardsController
+
 end
