@@ -1,4 +1,39 @@
-// Checkboxes design
+// whole form
+
+.all-forms {
+  display: flex;
+  padding: 20px;
+  margin-left: 60px;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-2 {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  padding-left: 20px;
+}
+
+.title {
+  display: flex;
+  width: 250px;
+}
+
+.img-circle {
+  border-radius: 50%;
+  background-color: lightblue;
+}
+// learning cards
+
 .category-choices {
   display: flex;
   justify-content: space-between;
@@ -17,21 +52,64 @@
     opacity: 1;
     cursor: pointer;
   }
-  &.active {
-  background: red;
+
+}
+
+// blacklist cards
+
+.hidden {
+  display: none;
+}
+
+.blacklist-all {
+  display: flex;
+  justify-content: space-around;
+}
+
+.blacklist-choices {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.blacklist-card {
+  display: flex;
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  width: 400px;
+
+  &:hover {
+    background-color: #f4f2f2;
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  &:active {
+  background-color: red;
   color: white;
   opacity: 1;
   }
 }
 
-.blacklist-card {
-  background-color: yellow;
-  padding: 20px;
+.blacklist-card img {
+  padding: 15px;
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
 }
 
-.hidden {
-  display: none;
-
+.blacklist-card h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
 }
 
-
+.blacklist-infos {
+  padding: 16px;
+}
