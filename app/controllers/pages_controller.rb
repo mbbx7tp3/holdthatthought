@@ -6,10 +6,16 @@ class PagesController < ApplicationController
       @user = User.new
     end
     # @blacklist_user = BlacklistUser.new
-    @blacklist_options = Blacklist.all
+
+    # @blacklist_options = Blacklist.all
   end
 
   def dashboard
     @user = current_user
   end
+
+  def test
+    @user = current_user
+  end
+
 end

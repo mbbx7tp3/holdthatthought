@@ -28,54 +28,71 @@
   </div>
 </div>
 
+<!-- form is to User update -->
+<!-- hidden input for User[blacklist_ids] -->
 
-<!-- forms -->
+
+<!-- learning static form -->
 
 <h3>What would you like to learn?</h3>
+<div class= "card-container">
+  <%= simple_form_for(@user, url: user_registration_path,method: :get) do |f| %>
+  <div class="category-choices">
+      <% User::LEARNING_OPTIONS.each do |category| %>
 
-<%= simple_form_for(@user, url: user_registration_path) do |f| %>
-<div class="category-choices">
-    <% User::LEARNING_OPTIONS.each do |category| %>
-      <input type="checkbox" class="hidden" >
-      <img src="" alt="">
-      <label class= "catagory-choice" >
-        <%= category %>
-        <i class="fa fa-check"></i>
-      </label>
-    <% end %>
-   </div>
+        <input type="hidden" class="hidden" value="<%= category%>" name="category" id="category">
+        <label for="category">
+          <div class="card-product">
+            <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" />
+            <div class="card-product-infos">
+              <h2>Le Wagon</h2>
+              <p>Change your life, learn to code</p>
+            </div>
+          </div>
+        </label>
+      <% end %>
+     </div>
 
-  <%= f.input :interest, as: :check_boxes, collection: User::LEARNING_OPTIONS %>
-  <%= f.button :submit, class:"btn btn-primary" %>
+    <%= f.button :submit, class:"btn btn-primary" %>
 
-<% end %>
+  <% end %>
+</div>
 
+<!-- blacklist form -->
 
 <h3>What would you like to avoid?</h3>
 
-<%= simple_form_for(@user, url: user_registration_path) do |f| %>
-<div class="category-choices">
-    <% User::LEARNING_OPTIONS.each do |category| %>
-      <input type="checkbox" class="hidden" >
-      <img src="" alt="">
-      <label class= "catagory-choice" >
-        <%= category %>
-        <i class="fa fa-check"></i>
-      </label>
-    <% end %>
-   </div>
-  <% end %>
+<%= simple_form_for(@user, url: users_update_path, method: :patch) do |f| %>
 
-<%= simple_form_for(@blacklist_user, url: blacklist_users_create_path) do |f| %>
-  <%= f.input :blacklist, class: "blacklist-form", as: :check_boxes, collection: @blacklist_options %>
-  <%= f.button :submit, class:"btn btn-primary" %>
+  <div class="form-group">
+    <input type="hidden" name="user[blacklist_ids][]" value="">
+    <div class="blacklist-choices">
+      <% Blacklist.all.each do |blacklist| %>
+        <input type="checkbox" class="hidden" value="<%= blacklist.id %>" name="user[blacklist_ids][]" id="user_blacklist_ids_<%= blacklist.id %>">
+        <label for="user_blacklist_ids_<%= blacklist.id %>">
+
+          <div class="blacklist-card">
+            <%= blacklist.name %>
+            <i class="fa fa-check"></i>
+          </div>
+
+        </label>
+      <% end %>
+     </div>
+  </div>
+  <%= f.submit "Update" %>
 <% end %>
 
 
 
+<%#= simple_form_for(@blacklist_user, url: blacklist_users_create_path) do |f| %>
+  <%#= f.input :blacklist, class: "blacklist-form", as: :check_boxes, collection: @blacklist_options %>
+  <%#= f.button :submit, class:"btn btn-primary" %>
+<%# end %>
+
 
 <!-- cards -->
-
+<!--
 <div class= "card-container">
 <div class="card-product">
   <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" />
@@ -134,4 +151,4 @@
     <h2>Instagram</h2>
   </div>
 </div>
-</div>
+</div> -->
