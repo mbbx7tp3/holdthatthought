@@ -1,4 +1,11 @@
-# USERS
+puts "Cleaning Database"
+
+User.destroy_all
+Category.destroy_all
+Blacklist.destroy_all
+Flashcard.destroy_all
+Plan.destroy_all
+
 
 User.create!(
   first_name: "Jonas",
@@ -117,6 +124,10 @@ puts "Created 5 flashcards..."
 
 
 puts "creating plans"
+
+Plan.create(name: "Free Plan")
+Plan.create(name: "Medium Plan")
+Plan.create(name: "Full Plan")
 
 
 puts "Seeding completed!"
