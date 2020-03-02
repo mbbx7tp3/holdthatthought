@@ -1,10 +1,12 @@
 puts "Cleaning Database"
 
+Plan.destroy_all
 User.destroy_all
+Flashcard.destroy_all
 Category.destroy_all
 Blacklist.destroy_all
-Flashcard.destroy_all
-Plan.destroy_all
+
+
 
 
 User.create!(
