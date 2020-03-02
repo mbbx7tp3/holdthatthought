@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   get 'dashboard', to: "pages#dashboard", as: :dashboard
-  get 'payment' , to: "pages#payment", as: :payment
+  get 'plans/index'
 
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
