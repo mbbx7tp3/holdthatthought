@@ -10,7 +10,6 @@ class User < ApplicationRecord
   has_many :blacklist_users
   has_many :blacklists, through: :blacklist_users
   has_one_attached :photo
-  belongs_to :plan
 
   LEARNING_OPTIONS = [
     "Le Wagon",
