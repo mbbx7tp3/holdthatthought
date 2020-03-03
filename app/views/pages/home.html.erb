@@ -1,9 +1,9 @@
 
 <!-- header and banner -->
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon" >
   <a class="navbar-brand" href="/dashboard">
     <i class="far fa-lightbulb" style= "font-size: 26px;"></i>
-</a>
+ </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -20,66 +20,59 @@
   </div>
 </div>
 
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);">
-  <div class="container m-5">
-    <div class="row justify-content-left p-5" id="title-text">
-      <h1 style= 'font-family: Noto Serif JP'>Hold That Thought</h1>
+
+<header>
+  <div class="intro-text">
+      <h1 style= 'font-family: Noto Serif JP;'>Hold That Thought</h1>
+  </div>
+</header>
+
+<section>
+   <div class= "page2">
+
+      <div class= "form-1 align-items-center">
+         <div class= "title">
+            <h3>What would you like to learn?</h3>
+         </div>
+              <div class= "card-container">
+                <div class="card-product" id="card" >
+                  <img src="assets/logo.png"/>
+                  <div class="card-product-infos">
+                    <h2>Le Wagon</h2>
+                    <p>Change your life, learn to code</p>
+                </div>
+            </div>
+
+            <div class="card-product" id="card">
+              <img src="assets/duo.png" />
+              <div class="card-product-infos">
+                <h2>Duo Lingo</h2>
+                <p>The worlds best way to learn a language</p>
+              </div>
+            </div>
+
+            <div class="card-product" id="card">
+               <img src="assets/elevate.png"/>
+                <div class="card-product-infos">
+                  <h2>Elevate</h2>
+                   <p>Stay sharp, build confidence, and boost productivity</p>
+                </div>
+            </div>
+        </div>
+    <div class= "arrow">
+      <i class="fas fa-arrow-right"></i>
     </div>
   </div>
-</div>
-
-
-
-<!-- learning static form -->
-
-<div class= "all-forms">
-
-<div class= "title">
-  <h3>What would you like to learn?</h3>
-</div>
-
-<div class= "form-1">
-
-
-    <div class= "card-container">
-  <div class="card-product" >
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png"
-    id = "lewagon"/>
-    <div class="card-product-infos">
-      <h2>Le Wagon</h2>
-      <p>Change your life, learn to code</p>
-    </div>
-  </div>
-
-  <div class="card-product">
-    <img src="assets/duo.png"
-    id= "duolingo" />
-    <div class="card-product-infos">
-      <h2>Duo Lingo</h2>
-      <p>The worlds best way to learn a language</p>
-    </div>
-  </div>
-
-  <div class="card-product">
-    <img src="assets/elevate.png"
-    id= "elevate" />
-    <div class="card-product-infos">
-      <h2>Elevate</h2>
-      <p>Stay sharp, build confidence, and boost productivity</p>
-    </div>
-  </div>
-  </div>
-</div>
-
+ </div>
+</section>
 
 <!-- blacklist form -->
-<div class= "title">
+
+<div class= "form-2 align-items-center">
+
+<div class= "title" style= "padding-bottom: 40px;">
   <h3>What would you like to avoid?</h3>
-
 </div>
-
-
-<div class= "form-2">
 
   <%= simple_form_for(@user, url: users_update_path, method: :patch) do |f| %>
 
@@ -90,7 +83,7 @@
           <input type="checkbox" class="hidden" value="<%= blacklist.id %>" name="user[blacklist_ids][]" id="user_blacklist_ids_<%= blacklist.id %>">
           <label for="user_blacklist_ids_<%= blacklist.id %>">
             <div class = "blacklist-all">
-              <div class="blacklist-card">
+              <div class="blacklist-card" id= "blacklist-card">
                 <img src= <%= blacklist.image_url %> />
                   <div class="blacklist-infos">
                     <h2><%= blacklist.name %></h2>
@@ -105,65 +98,3 @@
    <% end %>
   </div>
 </div>
-
-<!-- cards -->
-<!--
-<div class= "card-container">
-<div class="card-product">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" />
-  <div class="card-product-infos">
-    <h2>Le Wagon</h2>
-    <p>Change your life, learn to code</p>
-  </div>
-</div>
-
-<div class="card-product">
-  <img src="assets/duo.png" />
-  <div class="card-product-infos">
-    <h2>Duo Lingo</h2>
-    <p>The worlds best way to learn a language</p>
-  </div>
-</div>
-
-<div class="card-product">
-  <img src="assets/elevate.png" />
-  <div class="card-product-infos">
-    <h2>Elevate</h2>
-    <p>Stay sharp, build confidence, and boost productivity</p>
-  </div>
-</div>
-</div>
-
-<div class="row justify-content-center p-5">
-  <h1 style= 'font-family: Noto Serif JP'>What websites distract you?</h1>
-</div>
-
-<div class= "card-container">
-<div class="card-product">
-  <img src="assets/facebook.png" />
-  <div class="card-product-infos">
-    <h2>Facebook</h2>
-  </div>
-</div>
-
-<div class="card-product">
-  <img src="assets/twitter.png" />
-  <div class="card-product-infos">
-    <h2>Twitter</h2>
-  </div>
-</div>
-
-<div class="card-product">
-  <img src="assets/bbcnews.png" />
-  <div class="card-product-infos">
-    <h2>BBC News</h2>
-  </div>
-</div>
-
-<div class="card-product">
-  <img src="assets/instagram.png" />
-  <div class="card-product-infos">
-    <h2>Instagram</h2>
-  </div>
-</div>
-</div> -->

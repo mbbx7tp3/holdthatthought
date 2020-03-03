@@ -1,7 +1,7 @@
 .card-container {
   display: flex;
   padding: 50px;
-  padding-left: 20px;
+  margin-top: 0px;
   justify-content: space-between;
 }
 
@@ -12,10 +12,11 @@
   overflow: hidden;
   height: 120px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   width: 400px;
+  margin-bottom: 15px;
 }
 
 .card-product img {
