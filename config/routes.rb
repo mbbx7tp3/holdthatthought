@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get 'dashboard', to: "pages#dashboard", as: :dashboard
   get 'plans/index'
+  resources :flashcards, only: [:show]
 
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
