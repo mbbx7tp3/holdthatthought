@@ -14,7 +14,7 @@ class PagesController < ApplicationController
     @user = current_user
   end
 
-  def test
+  def payment
     @user = current_user
   end
 

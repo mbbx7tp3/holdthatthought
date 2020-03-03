@@ -115,5 +115,9 @@ end",
 
 puts "Created 5 flashcards..."
 
+
+puts "creating plans"
+
+
 puts "Seeding completed!"
 
