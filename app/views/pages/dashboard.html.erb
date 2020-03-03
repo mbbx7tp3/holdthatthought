@@ -40,35 +40,26 @@
       <div id="BlockedWebsites" class="tabcontent">
         <h1 style= 'font-family: Noto Serif JP; padding-bottom: 20px;'> <%= @user.first_name %>'s Blocked Websites </h1>
 
-          <div class= "card-container-dashboard">
-            <div class="card-product-dashboard">
-              <img src="assets/facebook.png" />
-              <div class="card-product-infos">
-                <h2>Facebook</h2>
+
+        <div class="form-group">
+              <input type="hidden" name="user[blacklist_ids][]" value="">
+              <div class="blacklist-choices">
+                <% Blacklist.all.each do |blacklist| %>
+                  <input type="checkbox" class="hidden" value="<%= blacklist.id %>" name="user[blacklist_ids][]" id="user_blacklist_ids_<%= blacklist.id %>">
+                  <label for="user_blacklist_ids_<%= blacklist.id %>">
+                    <div class = "blacklist-all">
+                      <div class="blacklist-card" id= "blacklist-card">
+                        <img src= <%= blacklist.image_url %> />
+                          <div class="blacklist-infos">
+                            <h2><%= blacklist.name %></h2>
+                          </div>
+                      </div>
+                   </div>
+                 </label>
+                <% end %>
               </div>
             </div>
 
-            <div class="card-product-dashboard">
-              <img src="assets/twitter.png" />
-              <div class="card-product-infos">
-                <h2>Twitter</h2>
-              </div>
-            </div>
-
-            <div class="card-product-dashboard">
-              <img src="assets/bbcnews.png" />
-              <div class="card-product-infos">
-                <h2>BBC News</h2>
-              </div>
-            </div>
-
-            <div class="card-product-dashboard">
-              <img src="assets/instagram.png" />
-              <div class="card-product-infos">
-                <h2>Instgram</h2>
-              </div>
-            </div>
-          </div>
         <div style="margin-top: 30px;">
         <%= link_to "Edit Blocked Websites", blacklist_users_edit_path, class: "btn btn-info btn-xs" %>
         </div>
@@ -137,6 +128,9 @@
   </main>
 
 </div>
+
+
+
 <script>
 function openPage(evt, cityName) {
   var i, tabcontent, tablinks;
