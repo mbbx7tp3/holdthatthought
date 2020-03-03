@@ -29,7 +29,7 @@
 }
 
 .img-click {
-  background-color:  #ffe8eb;
+  background-color:  #ffe8eb !important;
 }
 // learning cards
 
@@ -83,16 +83,16 @@
   align-items: center;
   width: 400px;
 
-  &:hover {
-    background-color: #f4f2f2;
-    opacity: 1;
-    cursor: pointer;
-  }
+  // &:hover {
+  //   background-color: #f4f2f2;
+  //   opacity: 1;
+  //   cursor: pointer;
+  // }
 
-  &:active {
-  color: white;
-  opacity: 1;
-  }
+  // &:active {
+  // color: white;
+  // opacity: 1;
+  // }
 }
 
 .blacklist-card img {

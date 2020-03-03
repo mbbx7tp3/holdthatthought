@@ -10,13 +10,13 @@ document.querySelectorAll("#card").forEach((card) => {
 
 document.querySelectorAll("#blacklist-card").forEach((card) => {
   card.addEventListener("click", (event) => {
+    console.log(event)
     event.currentTarget.classList.toggle("img-click");
   });
 });
 
 
 // background change on scroll
-
 
 function bgChanger(){
  if(this.scrollY > this.innerHeight / 1.5) {
