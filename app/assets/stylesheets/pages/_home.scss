@@ -1,4 +1,26 @@
-// Specific CSS for your home-page
+// body
+
+body {
+  background-color: #ffe8eb;
+  font-family: sans-serif;
+  transition: all 0.5s ease;
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// banner
 
 .banner {
   background-size: cover;
@@ -22,6 +44,28 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
+// title text and transition
 
+.intro-text h1 {
+ font-size: 35px;
+ margin-top: 50px;
+ margin-bottom: 10px;
+}
 
+.bg-active {
+  background-color: white;
+}
 
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+.form1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.form1 h3 {
+  margin-left: 50px;
+}
