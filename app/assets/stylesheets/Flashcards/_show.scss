@@ -1,0 +1,40 @@
+.flashcard-container {
+  height: 500px;
+  width: 600px;
+  background-color: #eaeaea;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+.flashcard-category {
+  /*background-color: yellow;*/
+  padding: 0;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.flashcard-category > img {
+  height: 24px;
+  margin-left: 16px;
+}
+#question {
+  padding: 8px 0;
+  margin-bottom: 8px;
+}
+.user-answer {
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 6px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  border: none;
+}
+.btn-light {
+  padding: 6px 12px;
+  width: 120px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+p {
+  margin: 0;
+}
