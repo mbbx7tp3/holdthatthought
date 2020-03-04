@@ -1,4 +1,4 @@
-<% if @next_flashcard.id < 5 %>
+<% if @next_flashcard.id <= 4 %>
 
   <div class="flashcard-container">
     <div class="flashcard-category">
@@ -23,11 +23,26 @@
       <h2> Congratulations you have done your flashcards </h2>
       </div>
       <div style="text-align: center; padding-top: 30px;">
-        <img src="/assets/giphy.gif" style="width: 400px">
+        <img id="randomImage"/style="width: 400px">
       </div>
       <div style="text-align: center; padding-top: 30px;">
       <%= link_to "Go to next Question", flashcard_path(@next_flashcard), class: "btn btn-info btn-xs" %>
        <%= link_to "Go Back to your Blocked Webiste", flashcard_path(@next_flashcard), class: "btn btn-info btn-xs" %>
       </div>
 <% end %>
+
+<script>
+function getRandomImage() {
+var images = ['/assets/giphy.gif', '/assets/cartoon.gif', '/assets/purple.gif', '/assets/simon.gif', '/assets/mother.gif',  ];
+var image = images[Math.floor(Math.random()*images.length)];
+
+return image;
+}
+
+function displayRandomImage() {
+var htmlImage = document.getElementById("randomImage");
+htmlImage.src = getRandomImage();
+}
+displayRandomImage();
+</script>
 
