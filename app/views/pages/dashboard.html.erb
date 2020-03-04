@@ -103,7 +103,7 @@
       <div id="Settings" class="tabcontent d-none">
         <h1 style= 'font-family: Noto Serif JP; margin-bottom: 20px;'> <%= @user.first_name %>'s Account details </h1>
         <p> Name: <%= @user.first_name %> <%= @user.last_name %>  </p>
-        <p> Email: <%= @user.email %></p>
+        <p style="padding-bottom: 20px"> Email: <%= @user.email %></p>
         <%= link_to "Edit Your Account Details", edit_user_registration_path, class: "btn btn-info btn-xs"%>
       </div>
 
