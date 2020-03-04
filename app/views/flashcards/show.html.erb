@@ -1,4 +1,4 @@
-<% if @next_flashcard.id < 4 %>
+<% if @next_flashcard.id < 5 %>
 
   <div class="flashcard-container">
     <div class="flashcard-category">
@@ -8,9 +8,9 @@
       <%= @flashcard.question %>
     </div>
     <textarea class="user-answer" rows="4" placeholder="Enter your answer here"></textarea>
-    <button class="tablinks" onclick="openPage(event, 'Answer')"> Click for Answer </button>
+    <button class="tablinks" data-id="Answer"> Find Answer </button>
 
-    <div id="Answer" class="tabcontent">
+    <div id="Answer" class="tabcontent d-none">
       <h2 style="text-align: center;"> Answer </h2>
       <div id="question"> <%= @flashcard.answer %>
       </div>
@@ -19,26 +19,12 @@
   </div>
 
   <% else %>
-
-      <h2 style="text-align: "> Well Done you have passed </h2>
-      <a href="https://facebook.com" target="_blank" style="text-align: center;"> <h2>Download Hold That Thought Crome Extension</h2> </a>
+      <div style="text-align: center;">
+      <h2> Congratuatltion you have done your flashcards </h2>
+      </div>
+      <div style="text-align: center; padding-top: 50px;">
+        <img src="/assets/Welldone.jpeg" style="width: 400px">
+      </div>
 
 <% end %>
 
-<script>
-function openPage(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-
-  document.getElementById("defaultOpen").click();
-</script>
