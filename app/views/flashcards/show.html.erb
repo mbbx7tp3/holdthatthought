@@ -1,4 +1,4 @@
-<% if @flashcard.id <= 4 %>
+<% if (@flashcard.id % 4) != 0 %>
 
   <div class="flashcard-container">
     <div class="flashcard-category">
