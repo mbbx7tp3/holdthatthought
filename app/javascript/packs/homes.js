@@ -27,3 +27,10 @@ function bgChanger(){
 }
 
 window.addEventListener("scroll", bgChanger);
+
+
+// replacing form 1 with 2
+
+function show(param_div_id) {
+    document.getElementById('main_place').innerHTML = document.getElementById(param_div_id).innerHTML;
+  }
