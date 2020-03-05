@@ -12,6 +12,7 @@ class PagesController < ApplicationController
 
   def dashboard
     @user = current_user
+    @flashcard_users = FlashcardUser.last
   end
 
   def payment
