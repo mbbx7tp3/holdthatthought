@@ -1,4 +1,4 @@
-<% if @next_flashcard.id <= 4 %>
+<% if @flashcard.id <= 4 %>
 
   <div class="flashcard-container">
     <div class="flashcard-category">
@@ -12,9 +12,10 @@
 
     <div id="Answer" class="tabcontent d-none">
       <h2 style="text-align: center;"> Answer </h2>
-      <div id="question"> <%= @flashcard.answer %>
+      <div id="question"> <%= @flashcard.answer %> </div>
+      <div style="text-align: center;">
+      <%= link_to "Go to next Question", flashcard_users_path(flashcard_id: @flashcard.id), method: :post, class: "btn btn-info btn-xs" %>
       </div>
-      <%= link_to "Go to next Question", flashcard_path(@next_flashcard), class: "btn btn-info btn-xs" %>
     </div>
   </div>
 
@@ -26,8 +27,7 @@
         <img id="randomImage"/style="width: 400px">
       </div>
       <div style="text-align: center; padding-top: 30px;">
-      <%= link_to "Go to next Question", flashcard_path(@next_flashcard), class: "btn btn-info btn-xs" %>
-       <%= link_to "Go Back to your Blocked Webiste", flashcard_path(@next_flashcard), class: "btn btn-info btn-xs" %>
+      <%= link_to "Go to next Question", flashcard_path(@flashcard.id + 1), class: "btn btn-info btn-xs" %>
       </div>
 
 <% end %>
