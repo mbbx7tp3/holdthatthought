@@ -2,7 +2,7 @@
 
   <div class="flashcard-container">
     <div class="flashcard-category">
-      <img src="/assets/rails-logo.svg" alt="Rails logo" width="">
+      <%= image_tag "rails-logo.svg", alt: "Rails logo" %>
     </div>
     <div id="question">
       <%= @flashcard.question %>
@@ -24,7 +24,6 @@
       <h2> Congratulations you have done your flashcards </h2>
       </div>
       <div style="text-align: center; padding-top: 30px;">
-        <img id="randomImage"/style="width: 400px">
       </div>
       <div style="text-align: center; padding-top: 30px;">
       <%= link_to "Go to next Question", flashcard_path(@flashcard.id + 1), class: "btn btn-info btn-xs" %>
