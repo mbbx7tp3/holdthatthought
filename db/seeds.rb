@@ -44,8 +44,9 @@ puts "Created 4 users..."
 
 Category.create(category: "Ruby on Rails")
 Category.create(category: "JavaScript")
+Category.create(category: "Front End")
 
-puts "Created 2 categories..."
+puts "Created 3 categories..."
 
 
 # BLACKLISTS
@@ -77,9 +78,72 @@ Flashcard.create(
 
 Flashcard.create(
   question: "How do you build a link to the homepage of a Rails app?",
+  answer: "rails new MY_APP",
+  category: Category.find(1)
+)
+
+Flashcard.create(
+  question: "What is the default local port used by rails server?",
+  answer: "3000, you can consult your app at localhost:3000",
+  category: Category.find(1)
+)
+
+Flashcard.create(
+  question: "How do you install gems you added to your Gemfile?",
+  answer: "1 Kill any web server running (Ctrl + C)
+          2 Run bundle install
+          3 Restart the Rails server with rails s",
+  category: Category.find(1)
+)
+
+Flashcard.create(
+  question: "How do you launch a local server with Rails?",
+  answer: "rails server",
+  category: Category.find(1)
+)
+
+Flashcard.create(
+  question: "What is an action in Rails?",
+  answer: "An action is a controller’s method targeted by a route.",
+  category: Category.find(1)
+)
+
+Flashcard.create(
+  question: "What is Rails?",
+  answer: "Rails is a fullstack framework designed for web-app development based on Ruby & MVC-structured.",
+  category: Category.find(1)
+)
+
+Flashcard.create(
+  question: "What is the command allowing you to list your app’s routes with Rails?",
+  answer: "rails routes",
+  category: Category.find(1)
+)
+
+Flashcard.create(
+  question: "How do you build the path to a page of a Rails app?",
+  answer: "contact_path",
+  category: Category.find(1)
+)
+
+Flashcard.create(
+  question: "Where can you find information and rating about a gem?",
+  answer: "You can go to its GitHub repo and check stars, forks, contributors and last commit date. You can also go to rubygems.org to check stats.",
+  category: Category.find(1)
+)
+
+Flashcard.create(
+  question: "Why are model validations so important?",
+  answer: "Validations protect your database from incomplete or invalid records and gives error messages to display back to the user.",
+  category: Category.find(1)
+)
+
+Flashcard.create(
+  question: "How does the development of any new rails app start?",
   answer: "<%= link_to 'Home', root_path %>",
   category: Category.find(1)
 )
+
 
 Flashcard.create(
   question: "Which information does rails routes display?",
@@ -120,6 +184,37 @@ beatles.each do |beatle|
   puts beatle
 end",
   category: Category.find(2)
+)
+
+Flashcard.create(
+  question: "In the HTML skeleton, which markup contains metas and which one contains page content?",
+  answer: "<head> markup contains metas which are read by the browser. <body> markup contains content which is displayed to the client by the browser.",
+  category: Category.find(3)
+)
+
+Flashcard.create(
+  question: "How do you define a paragraph?",
+  answer: "<p>A paragraph</p>",
+  category: Category.find(3)
+)
+
+Flashcard.create(
+  question: "How do you define the most important heading followed by the least important heading?",
+  answer: "<h1>Title 1</h1>
+<h6>Title 6</h6>",
+  category: Category.find(3)
+)
+
+Flashcard.create(
+  question: "What are the four types of CSS units?",
+  answer: "Units can be absolute in px, relative to the parent element in %, relative to the viewport (window) height vh or width vw, or relative to the font size of the element in em.",
+  category: Category.find(3)
+)
+
+Flashcard.create(
+  question: "What are the four types of CSS units?",
+  answer: "Units can be absolute in px, relative to the parent element in %, relative to the viewport (window) height vh or width vw, or relative to the font size of the element in em.",
+  category: Category.find(3)
 )
 
 puts "Created 5 flashcards..."

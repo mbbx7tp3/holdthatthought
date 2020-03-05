@@ -63,7 +63,7 @@ ActiveRecord::Schema.define(version: 2020_02_29_160323) do
   create_table "flashcard_users", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "flashcard_id"
-    t.boolean "status"
+    t.boolean "completed"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["flashcard_id"], name: "index_flashcard_users_on_flashcard_id"

@@ -1,0 +1,36 @@
+<% if @next_flashcard.id <= 4 %>
+
+  <div class="flashcard-container">
+    <div class="flashcard-category">
+      <img src="/assets/rails-logo.svg" alt="Rails logo" width="">
+    </div>
+    <div id="question">
+      <%= @flashcard.question %>
+    </div>
+    <textarea class="user-answer" rows="4" placeholder="Enter your answer here"></textarea>
+    <button class="tablinks" data-id="Answer"> Find Answer </button>
+
+    <div id="Answer" class="tabcontent d-none">
+      <h2 style="text-align: center;"> Answer </h2>
+      <div id="question"> <%= @flashcard.answer %>
+      </div>
+      <%= link_to "Go to next Question", flashcard_path(@next_flashcard), class: "btn btn-info btn-xs" %>
+    </div>
+  </div>
+
+  <% else %>
+      <div style="text-align: center; padding-top: 30px;">
+      <h2> Congratulations you have done your flashcards </h2>
+      </div>
+      <div style="text-align: center; padding-top: 30px;">
+        <img id="randomImage"/style="width: 400px">
+      </div>
+      <div style="text-align: center; padding-top: 30px;">
+      <%= link_to "Go to next Question", flashcard_path(@next_flashcard), class: "btn btn-info btn-xs" %>
+       <%= link_to "Go Back to your Blocked Webiste", flashcard_path(@next_flashcard), class: "btn btn-info btn-xs" %>
+      </div>
+
+<% end %>
+
+
+
