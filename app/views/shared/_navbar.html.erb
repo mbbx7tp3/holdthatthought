@@ -14,7 +14,7 @@
       <% if user_signed_in? %>
        <li class="nav-item active">
           <% if FlashcardUser.count == 0 %>
-          <p class="nav-link" style="color: black;"> <%= link_to "Flashcards", "/flashcards/1" %> </p></p>
+          <p class="nav-link" style="color: black;"> <%= link_to "Flashcards", flashcard_path(Flashcard.first) %> </p></p>
           <% elsif  ((FlashcardUser.last.flashcard_id + 1) % 4) != 0 %>
           <p class="nav-link" style="color: black;"> <%= link_to "Flashcards", flashcard_path(FlashcardUser.last.flashcard_id + 1) %> </p>
           <% else %>

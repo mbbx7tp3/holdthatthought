@@ -93,7 +93,7 @@
           </div>
         <div style="margin-top: 30px;">
           <% if  FlashcardUser.count == 0 %>
-          <%= link_to "Go to your flashcards", 'flashcards/1', class: "btn btn-info btn-xs" %>
+          <%= link_to "Go to your flashcards", flashcard_path(Flashcard.first), class: "btn btn-info btn-xs" %>
           <% elsif  ((FlashcardUser.last.flashcard_id + 1) % 4) != 0 %>
           <%= link_to "Go to your flashcards", flashcard_path(FlashcardUser.last.flashcard_id + 1), class: "btn btn-info btn-xs" %>
           <% else %>

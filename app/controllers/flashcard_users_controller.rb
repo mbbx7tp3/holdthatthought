@@ -1,8 +1,8 @@
 class FlashcardUsersController < ApplicationController
 
   def create
-    @flascard_user = FlashcardUser.new(user: current_user, flashcard_id: params[:flashcard_id], completed: true)
-    if @flascard_user.save
+    @flashcard_user = FlashcardUser.new(user: current_user, flashcard_id: params[:flashcard_id], completed: true)
+    if @flashcard_user.save
       redirect_to flashcard_path(find_next_flashcard)
     else
       redirect_to flashcard_path(params[:flashcard_id])
