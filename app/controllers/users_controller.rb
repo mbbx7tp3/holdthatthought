@@ -19,7 +19,6 @@ class UsersController < ApplicationController
     # @user = current_user
     # @user.update(blacklist_ids: [ "3" ])
 
-    raise
 
   end
 

@@ -30,7 +30,7 @@
 <section>
    <div class= "page2">
 
-      <div class= "form-1 align-items-center" id= "form-1" style= "display:block">
+      <div class= "form-1 align-items-center" id= "form-1" >
          <div class= "title">
             <h3>What would you like to learn?</h3>
          </div>
@@ -62,8 +62,8 @@
             </div>
         </div>
            <div class= "arrow">
-            <a href="javascript:SwapDivsWithClick('form-1','form-2')" class="fas fa-arrow-right"></a>
-       </div>
+            <a href="javascript:SwapDivsWithClick('form-1','form-2')" class="fas fa-arrow-right" style= "font-size: 24px; color: black; text-decoration: none;"></a>
+        </div>
     </div>
  </div>
 </section>
@@ -97,10 +97,14 @@
         <% end %>
       </div>
     </div>
-    <%= f.submit "Create profile" %>
+    <%= f.submit "Create profile", class: "btn btn-ghost" %>
    <% end %>
   </div>
 </div>
+
+<!-- add sign up form -->
+
+
 
 <!-- swap divs JS function -->
 
