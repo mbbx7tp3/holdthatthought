@@ -36,10 +36,10 @@
         <p> You have not answered any questions yet </p>
 
         <% else %>
-        <p> You were blocked <%=  (FlashcardUser.last.flashcard_id % 4).to_i.floor %> times </p>
+        <p> You were blocked: <%=  (FlashcardUser.last.flashcard_id % 4).to_i.floor %> times </p>
         <p> Flash Cards Answered: <%= (FlashcardUser.last.flashcard_id) - (FlashcardUser.last.flashcard_id % 4)  %></p>
         <% end %>
-        <p> Time Saved: 1 Hour and 2 Minutes </p>
+        <p> Time saved: <%=  (FlashcardUser.last.flashcard_id)*20 %> seconds </p>
       </div>
       <div id="BlockedWebsites" class="tabcontent d-none">
         <h1 style= 'font-family: Noto Serif JP; padding-bottom: 20px;'> <%= @user.first_name %>'s Blocked Websites </h1>
