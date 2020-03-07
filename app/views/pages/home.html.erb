@@ -30,7 +30,7 @@
 <section>
    <div class= "page2">
 
-      <div class= "form-1 align-items-center" id= "form-1">
+      <div class= "form-1 align-items-center" id= "form-1" style= "display:block">
          <div class= "title">
             <h3>What would you like to learn?</h3>
          </div>
@@ -61,16 +61,17 @@
                 </div>
             </div>
         </div>
-    <div class= "arrow">
-      <i class="fas fa-arrow-right"></i>
+           <div class= "arrow">
+            <a href="javascript:SwapDivsWithClick('form-1','form-2')" class="fas fa-arrow-right"></a>
+       </div>
     </div>
-  </div>
  </div>
 </section>
 
 <!-- blacklist form -->
 
-<div class= "form-2 align-items-center" id="form-2">
+
+<div class= "form-2 align-items-center" id="form-2" style= "display:none; transition: all 5s ease;">
 
 <div class= "title" style= "padding-bottom: 40px;">
   <h3>What would you like to avoid?</h3>
@@ -86,8 +87,8 @@
           <label for="user_blacklist_ids_<%= blacklist.id %>">
             <div class = "blacklist-all">
               <div class="blacklist-card" id= "blacklist-card">
-                <img src= <%= blacklist.image_url %> />
-                  <div class="blacklist-infos">
+                <%= image_tag blacklist.image_url, alt: "alttext" %>
+                     <div class="blacklist-infos">
                     <h2><%= blacklist.name %></h2>
                   </div>
               </div>
@@ -100,3 +101,28 @@
    <% end %>
   </div>
 </div>
+
+<!-- swap divs JS function -->
+
+<script type="text/javascript">
+function SwapDivsWithClick(div1,div2)
+{
+   d1 = document.getElementById(div1);
+   d2 = document.getElementById(div2);
+   if( d2.style.display == "none" )
+   {
+      d1.style.display = "none";
+      d2.style.display = "block";
+   }
+   else
+   {
+      d1.style.display = "block";
+      d2.style.display = "none";
+   }
+}
+</script>
+
+
+
+
+
