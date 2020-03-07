@@ -51,10 +51,10 @@ puts "Created 3 categories..."
 
 # BLACKLISTS
 
-Blacklist.create(website_name: "Facebook", website_url: "http://www.facebook.com", image_url: "assets/facebook.png")
-Blacklist.create(website_name: "Instagram", website_url: "http://www.instagram.com", image_url: "assets/instagram.png")
-Blacklist.create(website_name: "Twitter", website_url: "http://www.twitter.com", image_url: "assets/twitter.png")
-Blacklist.create(website_name: "BBC News", website_url: "https://www.bbc.co.uk/news", image_url: "assets/bbcnews.png")
+Blacklist.create(website_name: "Facebook", website_url: "http://www.facebook.com", image_url: "facebook.png")
+Blacklist.create(website_name: "Instagram", website_url: "http://www.instagram.com", image_url: "instagram.png")
+Blacklist.create(website_name: "Twitter", website_url: "http://www.twitter.com", image_url: "twitter.png")
+Blacklist.create(website_name: "BBC News", website_url: "https://www.bbc.co.uk/news", image_url: "bbcnews.png")
 
 puts "Created 4 blacklist websites..."
 
