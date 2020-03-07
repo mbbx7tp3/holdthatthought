@@ -15,6 +15,7 @@ class UsersController < ApplicationController
 
     if @user.save
       redirect_to dashboard_path
+      return
     end
   end
 
