@@ -32,7 +32,7 @@
 
       <div id="YourStats" class="tabcontent d-none">
         <h1 style= 'font-family: Noto Serif JP; margin-bottom: 20px;'> <%= @user.first_name %> Stats </h1>
-        <p> You were blocked <%=  (FlashcardUser.last.flashcard_id % 4) %> times </p>
+        <p> You were blocked <%=  (FlashcardUser.last.flashcard_id % 4).to_i.floor %> times </p>
         <p> Flash Cards Answered: <%= (FlashcardUser.last.flashcard_id) - (FlashcardUser.last.flashcard_id % 4)  %></p>
         <p> Time Saved: 1 Hour and 2 Minutes </p>
       </div>
