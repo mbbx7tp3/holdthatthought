@@ -12,6 +12,10 @@ class UsersController < ApplicationController
 
     @blacklist_ids.each do |blacklist_id|
       BlacklistUser.create(user: @user, blacklist: Blacklist.find(blacklist_id.to_i))
+
+    if @user.save
+      redirect_to dashboard_path
+    end
     end
 
     # @user.update(Hash[@blacklist_ids])
