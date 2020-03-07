@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'dashboard', to: "pages#dashboard", as: :dashboard
   get 'plans/index'
   resources :flashcards, only: [:show]
+  resources :flashcard_users, only: [:create]
 
   namespace :api, defaults: { format: :json } do
     namespace :v1 do

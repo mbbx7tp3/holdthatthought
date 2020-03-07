@@ -1,16 +1,16 @@
-function getRandomImage() {
-var images = ['/assets/giphy.gif', '/assets/cartoon.gif', '/assets/purple.gif', '/assets/simon.gif', '/assets/mother.gif',  ];
-var image = images[Math.floor(Math.random()*images.length)];
+const openPage = () => {
+  const tablinks = document.querySelectorAll(".tablinks");
+  tablinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+    tablinks.forEach(tabLink => tabLink.classList.remove('active'));
+      event.currentTarget.classList.add('active');
+      const container = document.getElementById(event.currentTarget.dataset.id);
+      const containers = document.querySelectorAll('.tabcontent');
+      containers.forEach(c => c.classList.add('d-none'));
+      container.classList.remove('d-none');
+    });
+  });
+};
 
-return image;
-}
 
-function displayRandomImage() {
-var htmlImage = document.getElementById("randomImage");
-htmlImage.src = getRandomImage();
-}
-displayRandomImage();
-
-// export { openPage };
-export { getRandomImage };
-export { displayRandomImage };
+export { openPage };
