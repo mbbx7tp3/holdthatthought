@@ -86,8 +86,9 @@
           <label for="user_blacklist_ids_<%= blacklist.id %>">
             <div class = "blacklist-all">
               <div class="blacklist-card" id= "blacklist-card">
-                <img src= <%= blacklist.image_url %> />
-                  <div class="blacklist-infos">
+               <%= image_tag blacklist.image_url, alt: "alttext" %>
+<!--                 <img src= <%= blacklist.image_url %> />
+ -->                  <div class="blacklist-infos">
                     <h2><%= blacklist.name %></h2>
                   </div>
               </div>
