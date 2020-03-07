@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
+      get 'login_return_token', to: 'tokens#login_return_token'
       resources :blacklists, only: [ :index ]
       resources :flashcards, only: [ :index, :show, :update ]
     end
