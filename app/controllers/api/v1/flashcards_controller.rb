@@ -1,5 +1,5 @@
 class Api::V1::FlashcardsController < Api::V1::BaseController
-  acts_as_token_authentication_handler_for User, except: [ :index ]
+  acts_as_token_authentication_handler_for User
   before_action :set_flashcard, only: [ :show, :update ]
 
   def index
@@ -8,15 +8,15 @@ class Api::V1::FlashcardsController < Api::V1::BaseController
 
     # This is hard coded!!!
 
-    user = User.last
+    # user = User.last
 
-    flashcard_users = user.flashcard_users
-    not_completed = flashcard_users.where(status: false)
-    @flashcards = not_completed.map do |flashcard_user|
-      flashcard_user.flashcard
-    end
+    # flashcard_users = user.flashcard_users
+    # not_completed = flashcard_users.where(status: false)
+    # @flashcards = not_completed.map do |flashcard_user|
+    #   flashcard_user.flashcard
+    # end
 
-    @flashcards = @flashcards.shuffle.first(3)
+    # @flashcards = @flashcards.shuffle.first(3)
   end
 
   def show
