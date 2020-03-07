@@ -20,6 +20,7 @@ class UsersController < ApplicationController
     # @user.update(blacklist_ids: [ "3" ])
 
 
+
   end
 
 end
