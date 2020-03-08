@@ -123,6 +123,23 @@ function SwapDivsWithClick(div1,div2)
       d2.style.display = "none";
    }
 }
+
+function SwapDiv2withClick(div2,div3)
+{
+   d2 = document.getElementById(div2);
+   d3 = document.getElementById(div3);
+   if( d3.style.display == "none")
+   {
+      d2.style.display = "none";
+      d3.style.display = "block";
+   }
+   else
+   {
+      d2.style.display = "block";
+      d3.style.display = "none";
+   }
+}
+
 </script>
 
 
