@@ -7,9 +7,6 @@ Flashcard.destroy_all
 Category.destroy_all
 Blacklist.destroy_all
 
-
-
-
 User.create!(
   first_name: "Jonas",
   last_name: "Vanbuel",
@@ -220,13 +217,31 @@ Flashcard.create(
 
 puts "Created 5 flashcards..."
 
+User.all.each do |user|
+  Flashcard.all.each do |flashcard|
+
+    FlashcardUser.create(user: user, flashcard: flashcard, completed: false)
+
+  end
+end
+
+puts "Adding flashcards to users"
+
+User.all.each do |user|
+  Blacklist.all.each do |blacklist|
+
+    BlacklistUser.create(user: user, blacklist: blacklist)
+
+  end
+end
+
+puts "Adding blacklists to users"
 
 puts "creating plans"
 
 Plan.create(name: "Free Plan")
 Plan.create(name: "Medium Plan")
 Plan.create(name: "Full Plan")
-
 
 puts "Seeding completed!"
 
