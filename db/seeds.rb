@@ -224,6 +224,18 @@ User.all.each do |user|
   end
 end
 
+puts "Adding flashcards to users"
+
+User.all.each do |user|
+  Blacklist.all.each do |blacklist|
+
+    BlacklistUser.create(user: user, blacklist: blacklist)
+
+  end
+end
+
+puts "Adding blacklists to users"
+
 puts "creating plans"
 
 Plan.create(name: "Free Plan")

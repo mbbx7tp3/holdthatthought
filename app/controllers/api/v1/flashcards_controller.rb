@@ -28,6 +28,7 @@ class Api::V1::FlashcardsController < Api::V1::BaseController
 
     @flashcard_user = FlashcardUser.find_by(user_id: user.id, flashcard_id: @flashcard.id)
     @flashcard_user.completed = true
+    @flashcard_user.save
     render :show
   end
 
