@@ -3,20 +3,21 @@ class Api::V1::FlashcardsController < Api::V1::BaseController
   before_action :set_flashcard, only: [ :show, :update ]
 
   def index
-    @flashcards = policy_scope(Flashcard)
-    authorize @flashcards
+    # @flashcards = policy_scope(Flashcard)
+    # authorize @flashcards
 
     # This is hard coded!!!
 
     # user = User.last
 
-    # flashcard_users = user.flashcard_users
-    # not_completed = flashcard_users.where(status: false)
-    # @flashcards = not_completed.map do |flashcard_user|
-    #   flashcard_user.flashcard
-    # end
+    flashcard_users = current_user.flashcard_users
+    not_completed = flashcard_users.where(status: false)
+    @flashcards = not_completed.map do |flashcard_user|
+      flashcard_user.flashcard
+    end
 
-    # @flashcards = @flashcards.shuffle.first(3)
+    @flashcards = @flashcards.shuffle.first(3)
+    authorize @flashcards
   end
 
   def show
