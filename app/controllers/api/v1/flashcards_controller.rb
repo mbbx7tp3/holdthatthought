@@ -6,6 +6,7 @@ class Api::V1::FlashcardsController < Api::V1::BaseController
     @flashcards = policy_scope(Flashcard)
     authorize @flashcards
 
+
     # This is hard coded!!!
 
     # user = User.last
