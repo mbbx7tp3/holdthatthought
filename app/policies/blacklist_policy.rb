@@ -1,7 +1,11 @@
 class BlacklistPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.where(user: current_user)
+      scope.all
     end
+  end
+
+  def index?
+    return true
   end
 end

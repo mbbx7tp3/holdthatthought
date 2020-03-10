@@ -5,16 +5,15 @@ class FlashcardPolicy < ApplicationPolicy
     end
   end
 
-  # def index?
-  #   true
-  # end
+  def index?
+    return true
+  end
 
   def show?
-    true
+    return true
   end
 
   def update?
-    # record.user == user
     return true
   end
 end
