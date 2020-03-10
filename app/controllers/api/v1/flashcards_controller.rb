@@ -16,7 +16,6 @@ class Api::V1::FlashcardsController < Api::V1::BaseController
     end
 
     @flashcards = @flashcards.shuffle.first(3)
-
   end
 
   def show
