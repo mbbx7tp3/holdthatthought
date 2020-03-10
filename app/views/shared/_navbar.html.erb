@@ -13,7 +13,9 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
        <li class="nav-item active">
-          <% if  ((FlashcardUser.last.flashcard_id + 1) % 4) != 0 %>
+          <% if FlashcardUser.count == 0 %>
+          <p class="nav-link" style="color: black;"> <%= link_to "Flashcards", flashcard_path(Flashcard.first) %> </p></p>
+          <% elsif  ((FlashcardUser.last.flashcard_id + 1) % 4) != 0 %>
           <p class="nav-link" style="color: black;"> <%= link_to "Flashcards", flashcard_path(FlashcardUser.last.flashcard_id + 1) %> </p>
           <% else %>
           <p class="nav-link" style="color: black;"> <%= link_to "Flashcards", flashcard_path(FlashcardUser.last.flashcard_id + 2) %> </p>
@@ -26,6 +28,7 @@
           <% if @user.photo.attached? %>
           <%= cl_image_tag @user.photo.key , class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <%  else %>
+          <%=  image_tag "download.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <% end %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "Go to you dashboard", "/dashboard", class: "dropdown-item" %>

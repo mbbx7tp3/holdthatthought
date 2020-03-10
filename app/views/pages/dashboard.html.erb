@@ -26,15 +26,20 @@
         <%= image_tag "https://www.darrelwilson.com/wp-content/uploads/2018/11/crome-extention.jpg", class:'chrome-img' %>
         </div>
         <div style="margin-top: 50px;">
-        <a href="https://chrome.google.com/webstore/category/extensions" target="_blank" style="text-align: center;"> <h2>Download Hold That Thought Crome Extension</h2> </a>
+        <a href="https://chrome.google.com/webstore/category/extensions" target="_blank" style="text-align: center;"> <h2>Download Hold That Thought Chrome Extension</h2> </a>
         </div>
       </div>
 
       <div id="YourStats" class="tabcontent d-none">
         <h1 style= 'font-family: Noto Serif JP; margin-bottom: 20px;'> <%= @user.first_name %> Stats </h1>
-        <p> You were blocked <%=  (FlashcardUser.last.flashcard_id % 4).to_i.floor %> times </p>
-        <p> Flash Cards Answered: <%= (FlashcardUser.last.flashcard_id) - (FlashcardUser.last.flashcard_id % 4)  %></p>
-        <p> Time Saved: 1 Hour and 2 Minutes </p>
+        <% if FlashcardUser.count == 0 %>
+        <p> You have not answered any flashcards yet </p>
+
+        <% else %>
+        <p> You were blocked:  1 time </p>
+        <p> Flash Cards Answered: <%= (FlashcardUser.last.flashcard_id)   %></p>
+        <p> Time saved: <%=  (FlashcardUser.last.flashcard_id)*20 %> seconds </p>
+        <% end %>
       </div>
       <div id="BlockedWebsites" class="tabcontent d-none">
         <h1 style= 'font-family: Noto Serif JP; padding-bottom: 20px;'> <%= @user.first_name %>'s Blocked Websites </h1>
@@ -87,7 +92,9 @@
             </div>
           </div>
         <div style="margin-top: 30px;">
-          <% if  ((FlashcardUser.last.flashcard_id + 1) % 4) != 0 %>
+          <% if  FlashcardUser.count == 0 %>
+          <%= link_to "Go to your flashcards", flashcard_path(Flashcard.first), class: "btn btn-info btn-xs" %>
+          <% elsif  ((FlashcardUser.last.flashcard_id + 1) % 4) != 0 %>
           <%= link_to "Go to your flashcards", flashcard_path(FlashcardUser.last.flashcard_id + 1), class: "btn btn-info btn-xs" %>
           <% else %>
           <%= link_to "Go to your flashcards", flashcard_path(FlashcardUser.last.flashcard_id + 2), class: "btn btn-info btn-xs" %>
