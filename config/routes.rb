@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       get 'login_return_token', to: 'tokens#login_return_token'
       resources :blacklists, only: [ :index ]
+      patch 'blacklists/create', to: 'blacklists#create'
       resources :flashcards, only: [ :index, :show, :update ]
     end
   end
