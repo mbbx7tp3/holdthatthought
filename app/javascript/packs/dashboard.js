@@ -12,4 +12,4 @@ const openPage = () => {
   });
 };
 
-export { openPage };
+openPage();
