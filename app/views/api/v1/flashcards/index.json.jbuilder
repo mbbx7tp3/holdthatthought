@@ -1,3 +1,3 @@
 json.array! @flashcards do |flashcard|
-  json.extract! flashcard, :question, :answer
+  json.extract! flashcard, :id, :question, :answer
 end

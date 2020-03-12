@@ -1,7 +1,9 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <a class="navbar-brand" href="/">
-    <i class="far fa-lightbulb" style= "font-size: 26px;"></i>
-</a>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <%=  image_tag "chrome.jpeg", class: "avatar dropdown-toggle", id: "navbarDropdown" %>
+  <p class="nav-link" style="color: black;"><%= link_to "Install", "https://chrome.google.com/webstore/category/extensions", :target => "_blank" %> </p>
+  </div>
+
 
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,19 +13,17 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
+
       <% if user_signed_in? %>
-       <li class="nav-item active">
-          <% if FlashcardUser.count == 0 %>
-          <p class="nav-link" style="color: black;"> <%= link_to "Flashcards", flashcard_path(Flashcard.first) %> </p></p>
-          <% elsif  ((FlashcardUser.last.flashcard_id + 1) % 4) != 0 %>
-          <p class="nav-link" style="color: black;"> <%= link_to "Flashcards", flashcard_path(FlashcardUser.last.flashcard_id + 1) %> </p>
-          <% else %>
-          <p class="nav-link" style="color: black;"> <%= link_to "Flashcards", flashcard_path(FlashcardUser.last.flashcard_id + 2) %> </p>
-          <% end %>
+
+        <li class="nav-item active">
+          <p class="nav-link" style="color: black;"><%= link_to "Flashcards", flashcard_path(@upcoming_flashcard) %></p>
         </li>
+
         <li class="nav-item active">
           <p class="nav-link"> Hi <%= @user.first_name %></p>
         </li>
+
         <li class="nav-item dropdown">
           <% if @user.photo.attached? %>
           <%= cl_image_tag @user.photo.key , class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
@@ -32,6 +32,7 @@
           <% end %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "Go to you dashboard", "/dashboard", class: "dropdown-item" %>
+            <%= link_to "Account Details", edit_user_registration_path, class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>

@@ -1,37 +1,44 @@
-<% if (@flashcard.id % 4) != 0 %>
+<div class="flashcard-container">
 
-  <div class="flashcard-container">
-    <div class="flashcard-category">
-      <%= image_tag "rails-logo.svg", alt: "Rails logo" %>
-    </div>
-    <div id="question">
-      <%= @flashcard.question %>
-    </div>
-    <textarea class="user-answer" rows="4" placeholder="Enter your answer here"></textarea>
-    <button class="tablinks" data-id="Answer"> Find Answer </button>
-
-    <div id="Answer" class="tabcontent d-none">
-      <div class="box">
-      <div id="question"> <p style="padding-left: 5px;"> <%= @flashcard.answer %> </p></div>
-      </div>
-      <div style="text-align: center;">
-      <%= link_to "Go to next Question", flashcard_users_path(flashcard_id: @flashcard.id), method: :post, class: "btn btn-info btn-xs" %>
-      </div>
-    </div>
+  <div class="flashcard-category">
+    <%= image_tag "rails-logo.svg", alt: "Rails logo" %>
   </div>
 
-  <% else %>
-      <div style="text-align: center; padding-top: 30px;">
-      <h2> Congratulations you have done your flashcards </h2>
-      </div>
-      <div style="text-align: center; padding-top: 30px;">
-        <%= image_tag get_random_image %>
-      </div>
-      <div style="text-align: center; padding-top: 30px;">
-      <%= link_to "Go to next Question", flashcard_path(@flashcard.id + 1), class: "btn btn-info btn-xs" %>
-      <button class="btn btn-info btn-xs"> <a href="https://facebook.com" target="_blank"> Go to your blocked website </a> </button>
+  <div id="question">
+    <%= @current_flashcard.question %>
+  </div>
 
-      </div>
+  <textarea class="user-answer" rows="4" placeholder="Enter your answer here"></textarea>
 
-<% end %>
+  <button class="tablinks" data-id="Answer">Find Answer</button>
+
+  <div id="Answer" class="tabcontent d-none">
+
+    <div class="box">
+      <div id="question"><p style="padding-left: 5px;"><%= @current_flashcard.answer %></p></div>
+    </div>
+
+    <div style="text-align: center;">
+
+      <!-- ADD HIDDEN DATA FIELD WITH COUNT OF FLASHCARDS -->
+
+      <%#= link_to "Next Question", flashcard_users_path(flashcard_id: @flashcard.id), method: :post, class: "btn btn-info btn-xs" %>
+      <%= link_to "Next Question", flashcard_path(@next_flashcard), class: "btn btn-info btn-xs", id: "next-btn"%>
+    </div>
+  </div>
+</div>
+
+
+<!-- <div style="text-align: center; padding-top: 30px;">
+<h2> Congratulations you have done your flashcards </h2>
+</div>
+<div style="text-align: center; padding-top: 30px;">
+  <%= image_tag get_random_image %>
+</div>
+<div style="text-align: center; padding-top: 30px;">
+<%#= link_to "Go to next Question", flashcard_path(@flashcard.id + 1), class: "btn btn-info btn-xs" %>
+<button class="btn btn-info btn-xs"> <a href="https://facebook.com" target="_blank"> Go to your blocked website </a> </button>
+</div> -->
+
+
 

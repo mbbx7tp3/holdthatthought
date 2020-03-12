@@ -1,10 +1,4 @@
 import "bootstrap";
 import "./homes";
-
-import { openPage } from './dashboard';
-openPage();
-
-
-
-
-
+import "./dashboard";
+import "./flashcard_show";

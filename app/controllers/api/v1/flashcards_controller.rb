@@ -40,6 +40,6 @@ class Api::V1::FlashcardsController < Api::V1::BaseController
   end
 
   def flashcard_params
-    params.require(:flashcard).permit(:question, :answer, :completed)
+    params.require(:flashcard).permit(:id, :question, :answer, :completed)
   end
 end

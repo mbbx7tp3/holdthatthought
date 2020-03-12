@@ -12,7 +12,7 @@ class PagesController < ApplicationController
 
   def dashboard
     @user = current_user
-    @flashcard_users = FlashcardUser.last
+    @upcoming_flashcard = FlashcardUser.where(user_id: @user.id).where(completed: false).first.flashcard
   end
 
   def payment
