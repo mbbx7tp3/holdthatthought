@@ -18,27 +18,48 @@ class Api::V1::BlacklistsController < Api::V1::BaseController
     user = User.find_by(email: user_email, authentication_token: user_token)
 
     if user
-      blacklist_id = request.env["HTTP_X_BLACKLIST_ID"]
+      # blacklist_id = request.env["HTTP_X_BLACKLIST_ID"]
       website_name = request.env["HTTP_X_BLACKLIST_NAME"]
       website_url = request.env["HTTP_X_BLACKLIST_URL"]
 
       # TO DO: CHECK IF WEBSITE_NAME ALREADY EXISTS
+      existing_blacklist = Blacklist.where(website_name: website_name)
 
 
 
-      # 1. Create Blacklist
-      # If extension doesn't provide ID => blacklist doesn't yest exist and needs to be created new
-      # blacklist_id should be nill
-      if !blacklist_id
+      unless existing_blacklist[0]
+
+        # If Blacklist doesn't exist yet
+        # Create new blacklist
         new_blacklist = Blacklist.create(
             website_name: website_name,
             website_url: website_url
           )
-        # 2. Create BlacklistUser
+        # Create new BlacklistUser
         BlacklistUser.create(user: User.find(user.id), blacklist: Blacklist.find(new_blacklist.id))
 
         # Return updated list of blacklists
-        blacklist_user_all = BlacklistUser.where(user: User.find(user.id))
+        blacklist_user_all = BlacklistUser.where(user_id: user.id)
+        @updated_blacklists = blacklist_user_all.map do |blacklist_user|
+          Blacklist.find(blacklist_user.blacklist_id)
+        end
+
+      else
+
+        # binding.pry
+
+        # If Blacklist already exists
+        # Check if BlacklistUser already exists
+        existing_blacklist_user = BlacklistUser.where(user: user, blacklist: existing_blacklist)
+
+        unless existing_blacklist_user
+          # If BlacklistUser doesn't yet exist
+          # Create new BlacklistUser
+          BlacklistUser.create(user_id: user.id, blacklist_id: new_blacklist.id)
+        end
+
+        # Return updated list of blacklists
+        blacklist_user_all = BlacklistUser.where(user_id: user.id)
         @updated_blacklists = blacklist_user_all.map do |blacklist_user|
           Blacklist.find(blacklist_user.blacklist_id)
         end
