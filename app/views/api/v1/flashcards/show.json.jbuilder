@@ -1,1 +1,1 @@
-json.extract! @flashcard, :question, :answer
+json.extract! @flashcard, :id, :question, :answer

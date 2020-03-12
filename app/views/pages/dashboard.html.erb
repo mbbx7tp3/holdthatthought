@@ -1,46 +1,17 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<h1 style="text-align: center; margin-top: 20px; font-family: Noto Serif JP;">  Hi <%= @user.first_name %> welcome to your dashboard </h1>
 
 <div class="dashboard-layout">
   <main class="dashboard-layout-main">
     <aside class="dashboard-sidebar">
       <div class="dashboard-sidebar-container">
         <div class="tab">
-          <button class="tablinks active" id="defaultOpen" data-id="Download"> Download </button>
-          <button class="tablinks" data-id="YourStats">Your Stats </button>
           <button class="tablinks" data-id="BlockedWebsites"> Blocked Websites</button>
           <button class="tablinks" data-id="Learning"> Learning Topics </button>
-          <button class="tablinks" data-id="Subscription"> Subscriptions </button>
-          <button class="tablinks" data-id="Settings"> Account Settings </button>
-          <button class="tablinks" data-id="Devices"> Your Devices </button>
-          <button class="tablinks" data-id="ContactUs"> Contact Us </button>
-          <button> <%= link_to "Log out", destroy_user_session_path, method: :delete %> </button>
         </div>
       </div>
     </aside>
     <div class="dashboard-layout-right">
 
-      <div id="Download" class="tabcontent">
-
-        <div class="container" style="text-align: center; margin-top: 40px">
-        <%= image_tag "chrome_logo.png", class:'chrome-img', style: "width: 30%;" %>
-        </div>
-        <div style="margin-top: 50px;">
-        <a href="https://chrome.google.com/webstore/category/extensions" target="_blank" style="text-align: center;"> <h2>Download Hold That Thought Chrome Extension</h2> </a>
-        </div>
-      </div>
-
-      <div id="YourStats" class="tabcontent d-none">
-        <h1 style= 'font-family: Noto Serif JP; margin-bottom: 20px;'> <%= @user.first_name %> Stats </h1>
-        <% if FlashcardUser.count == 0 %>
-        <p> You have not answered any flashcards yet </p>
-
-        <% else %>
-        <p> You were blocked:  1 time </p>
-        <p> Flash Cards Answered: <%= (FlashcardUser.last.flashcard_id)   %></p>
-        <p> Time saved: <%=  (FlashcardUser.last.flashcard_id)*20 %> seconds </p>
-        <% end %>
-      </div>
       <div id="BlockedWebsites" class="tabcontent d-none">
         <h1 style= 'font-family: Noto Serif JP; padding-bottom: 20px;'> <%= @user.first_name %>'s Blocked Websites </h1>
 
@@ -77,9 +48,6 @@
         <%= link_to "Edit Blocked Websites", blacklist_users_edit_path, class: "btn btn-info btn-xs" %>
         </div>
       </div>
-
-
-
       <div id="Learning" class="tabcontent d-none">
         <h1 style= 'font-family: Noto Serif JP'> <%= @user.first_name %> here are your learning topics </h1>
           <div class= "card-container-dashboard">
@@ -102,49 +70,6 @@
         <%= link_to "Edit Your Learning Topics", blacklist_users_learn_path, class: "btn btn-info btn-xs" %>
         </div>
       </div>
-
-      <div id="Subscription" class="tabcontent d-none">
-        <h1 style= 'font-family: Noto Serif JP; margin-bottom: 20px;'> <%= @user.first_name %>'s Subcription Details </h1>
-         You are on Hold That Thoughts free Subscription
-         <div style="margin-top: 30px;">
-        <%= link_to "Edit Your Subscription", plans_index_path, class: "btn btn-info btn-xs" %>
-        </div>
-      </div>
-
-      <div id="Settings" class="tabcontent d-none">
-        <h1 style= 'font-family: Noto Serif JP; margin-bottom: 20px;'> <%= @user.first_name %>'s Account details </h1>
-        <p> Name: <%= @user.first_name %> <%= @user.last_name %>  </p>
-        <p style="padding-bottom: 20px"> Email: <%= @user.email %></p>
-        <%= link_to "Edit Your Account Details", edit_user_registration_path, class: "btn btn-info btn-xs"%>
-      </div>
-
-      <div id="Devices" class="tabcontent d-none">
-        <h1 style= 'font-family: Noto Serif JP'> <%= @user.first_name %>'s Blocked Devices </h1>
-          <div class="card-product-dashboard" style="width: 500px;">
-            <img src="https://www.pngkey.com/png/detail/17-170270_computer-laptop-apple-symbol-cartoon-macintosh-mac-laptop.png" />
-            <div class="card-product-infos">
-              <h2> <%= @user.first_name %>'s Mac</h2>
-            </div>
-          </div>
-          <div class="card-product-dashboard" style="width: 500px;">
-            <img src="https://cdn5.vectorstock.com/i/1000x1000/91/69/iphone-cartoon-vector-6529169.jpg" />
-            <div class="card-product-infos">
-              <h2> <%= @user.first_name %>'s iPhone </h2>
-            </div>
-          </div>
-        <div style="margin-top: 30px;">
-        <%= link_to "Edit Your Devices", edit_user_registration_path, class: "btn btn-info btn-xs" %>
-        </div>
-
-      </div>
-
-      <div id="ContactUs" class="tabcontent d-none">
-        <a href="https://github.com/mbbx7tp3/holdthatthought" target="_blank"> Have a look at our Code </a>
-      </div>
-
-
     </div>
-
   </main>
-
 </div>

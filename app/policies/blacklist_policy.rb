@@ -6,6 +6,10 @@ class BlacklistPolicy < ApplicationPolicy
   end
 
   def index?
-    return true
+    true
+  end
+
+  def create?
+    true
   end
 end
