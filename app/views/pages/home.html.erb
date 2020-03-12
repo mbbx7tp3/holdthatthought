@@ -1,25 +1,6 @@
-
-<!-- header and banner -->
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon" >
-  <a class="navbar-brand" href="/dashboard">
-    <i class="far fa-lightbulb" style= "font-size: 26px;"></i>
- </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="/dashboard">Hi <%= @user.first_name %></a>
-      </li>
-        </div>
-      </li>
-    </ul>
-  </div>
+<div class="jumbotron jumbotron-fluid">
+  <%= video_tag "homepagevid.mp4",autoplay: true, loop: true, muted: 'muted', :controls => false, :id => 'jumbo-video-home', class: "tesben" %>
 </div>
-
 
 <header>
   <div class="intro-text">
@@ -27,6 +8,7 @@
       <h1 style= 'font-family: Noto Serif JP;'> Waste time, productively </h1>
   </div>
 </header>
+
 
 <section>
    <div class= "page2">
@@ -69,10 +51,11 @@
  </div>
 </section>
 
+
 <!-- blacklist form -->
 
 
-<div class= "container" id="form-2" style= "display:none; transition: all 5s ease; margin-bottom: 30px;">
+<div class= "container" id="form-2" style= "display:none; transition: all 5s ease; margin-bottom: 30px; text-align: center;">
 
 <div class = "row">
   <div class= "col" id= "title" style= "padding-bottom: 40px;">
@@ -126,7 +109,16 @@ function SwapDivsWithClick(div1,div2)
 }
 </script>
 
-
-
+<style>
+  .tesben {
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}</style>
 
 

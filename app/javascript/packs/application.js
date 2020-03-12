@@ -1,7 +1,7 @@
 import "bootstrap";
+import { openPage } from './dashboard';
 import "./homes";
 
-import { openPage } from './dashboard';
 openPage();
 
 
