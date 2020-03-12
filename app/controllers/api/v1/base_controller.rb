@@ -26,6 +26,7 @@ class Api::V1::BaseController < ActionController::API
     else
       response = { error: "Internal Server Error" }
     end
-    render json: response, status: :internal_server_error
+    # Below line was causing double render errors...
+    # render json: response, status: :internal_server_error
   end
 end
