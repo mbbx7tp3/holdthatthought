@@ -1,74 +1,30 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<div class="dashboard-layout">
-  <main class="dashboard-layout-main">
-    <aside class="dashboard-sidebar">
-      <div class="dashboard-sidebar-container">
-        <div class="tab">
-          <button class="tablinks" data-id="BlockedWebsites"> Blocked Websites</button>
-          <button class="tablinks" data-id="Learning"> Learning Topics </button>
-        </div>
+<div class="row">
+  <div class="column-left">
+    <div class="top-right">
+      <div class="header">
+      <h1> Your Blocked Websites </h1>
       </div>
-    </aside>
-    <div class="dashboard-layout-right">
-      <div id="BlockedWebsites" class="tabcontent d-none">
-        <h1 style= 'font-family: Noto Serif JP; padding-bottom: 20px;'> <%= @user.first_name %>'s Blocked Websites </h1>
-
-          <div class= "card-container-dashboard">
-            <div class="card-product-dashboard">
-              <img src="assets/facebook.png" />
-              <div class="card-product-infos">
-                <h2>Facebook</h2>
-              </div>
-            </div>
-
-            <div class="card-product-dashboard">
-              <img src="assets/twitter.png" />
-              <div class="card-product-infos">
-                <h2>Twitter</h2>
-              </div>
-            </div>
-
-            <div class="card-product-dashboard">
-              <img src="assets/bbcnews.png" />
-              <div class="card-product-infos">
-                <h2>BBC News</h2>
-              </div>
-            </div>
-
-            <div class="card-product-dashboard">
-              <img src="assets/instagram.png" />
-              <div class="card-product-infos">
-                <h2>Instgram</h2>
-              </div>
-            </div>
-          </div>
-        <div style="margin-top: 30px;">
-        <%= link_to "Edit Blocked Websites", blacklist_users_edit_path, class: "btn btn-info btn-xs" %>
-        </div>
-      </div>
-      <div id="Learning" class="tabcontent d-none">
-        <h1 style= 'font-family: Noto Serif JP'> <%= @user.first_name %> here are your learning topics </h1>
-          <div class= "card-container-dashboard">
-            <div class="card-product-dashboard" style="width: 500px;">
-              <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png"/>
-              <div class="card-product-infos">
-                <h2>Le Wagon</h2>
-                <p>Change your life, learn to code</p>
-              </div>
-            </div>
-          </div>
-        <div style="margin-top: 30px;">
-          <% if  FlashcardUser.count == 0 %>
-          <%= link_to "Go to your flashcards", flashcard_path(Flashcard.first), class: "btn btn-info btn-xs" %>
-          <% elsif  ((FlashcardUser.last.flashcard_id + 1) % 4) != 0 %>
-          <%= link_to "Go to your flashcards", flashcard_path(FlashcardUser.last.flashcard_id + 1), class: "btn btn-info btn-xs" %>
-          <% else %>
-          <%= link_to "Go to your flashcards", flashcard_path(FlashcardUser.last.flashcard_id + 2), class: "btn btn-info btn-xs" %>
-          <% end %>
-        <%= link_to "Edit Your Learning Topics", blacklist_users_learn_path, class: "btn btn-info btn-xs" %>
-        </div>
+      <div class="header">
+      <h1> Currently Blocking </h1>
       </div>
     </div>
-  </main>
+    <div class="bottom-right">
+      <h1> Add a new website </h1>
+    </div>
+  </div>
+
+  <div class="column-right">
+    <div class="top-left">
+      <div class="header">
+      <h1> Your Learning topics </h1>
+      </div>
+      <div class="header">
+      <h1> Currently Studying </h1>
+      </div>
+    </div>
+    <div class="bottom-left">
+      <h1> Other topics: </h1>
+    </div>
+  </div>
 </div>
+
