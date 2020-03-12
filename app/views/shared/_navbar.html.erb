@@ -1,7 +1,9 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <a class="navbar-brand" href="/">
-    <i class="far fa-lightbulb" style= "font-size: 26px;"></i>
-</a>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <%=  image_tag "chrome.jpeg", class: "avatar dropdown-toggle", id: "navbarDropdown" %>
+  <p class="nav-link" style="color: black;"><%= link_to "Install", "https://chrome.google.com/webstore/category/extensions", :target => "_blank" %> </p>
+  </div>
+
 
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,10 +18,6 @@
 
         <li class="nav-item active">
           <p class="nav-link" style="color: black;"><%= link_to "Flashcards", flashcard_path(@upcoming_flashcard) %></p>
-        </li>
-
-        <li class="nav-item active">
-          <p class="nav-link" style="color: black;"><%= link_to "Download", "https://chrome.google.com/webstore/category/extensions", :target => "_blank" %></p>
         </li>
 
         <li class="nav-item active">
