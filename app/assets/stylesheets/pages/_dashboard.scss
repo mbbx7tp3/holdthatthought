@@ -1,129 +1,64 @@
-.dashboard-layout {
-    display: flex;
-    flex-direction: column;
-    flex: 1 0 0;
-    overflow: auto;
+.row {
+  height: 1200px;
 }
 
-button {
-  margin-top: 10px;
+.column-left {
+  float: left;
+  width: 50%;
+  padding-left: 50px;
+  padding-top: 50px;
+  border-right: 2px solid white;
 }
 
-button a {
-  color: black;
+.column-right {
+  float: right;
+  width: 50%;
+  padding-left: 50px;
+  padding-top: 50px;
 }
 
-.dashboard-layout-main {
-    width: 100%;
-    max-width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    display: flex;
-    flex-flow: column nowrap;
-    flex: 1 0 auto;
-    flex-direction: row;
-    padding-top: 40px;
+.row h1 {
+font-family: Roboto;
+font-style: normal;
+font-weight: 300;
+font-size: 35px;
+line-height: 41px;
+display: flex;
+align-items: center;
 }
 
-.dashboard-sidebar {
-    width: 240px;
-    flex: 0 0 240px;
-    padding-left: 25px;
-    padding-right: 25px;
-    position: relative;
-    z-index: 20;
+.header {
+height: 100px;
 }
 
-.dashboard-sidebar-container {
-  position: sticky;
-  top: 40px;
+.top-right {
+  height: 50%;
 }
 
-.dashboard-layout-right {
-    position: relative;
-    flex: auto;
-    display: flex;
-    flex-direction: column;
-    padding-left: 20px;
-    padding-right: 50px;
+.bottom-right {
+  height: 50%;
 }
 
-
-.card-container-dashboard {
-  display: flex;
-  justify-content: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin:-10px;
+.top-left {
+  height: 50%;
 }
 
-
-.card-product-dashboard img {
-  padding: 10px;
-  height: 100%;
-  width: 120px;
-  object-fit: cover;
+.bottom-left {
+  height: 50%;
 }
 
 .card-product-dashboard {
-  overflow: hidden;
-  height: 120px;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
-  align-items: center;
-  width: 300px;
-  margin-top: 20px;
+width: 190px;
+height: 50px;
+left: 52px;
+top: 319px;
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 5px;
+margin-top: 15px;
 }
 
-
-.tab {
-  overflow: hidden;
-}
-
-/* Style the buttons that are used to open the tab content */
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ddd;
-}
-
-/* Create an active/current tablink class */
-.tab button.active {
-  background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-
-}
-
-
-.chrome-img {
-  width: 40%;
-}
-
-.tabcontent a {
- color: black;
-}
-
-.tabcontent {
-  animation: fadeEffect 1s; /* Fading effect takes 1 second */
-}
-
-/* Go from zero to full opacity */
-@keyframes fadeEffect {
-  from {opacity: 0;}
-  to {opacity: 1;}
+.card-container-dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
