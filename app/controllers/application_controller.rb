@@ -10,4 +10,8 @@ class ApplicationController < ActionController::Base
     # For additional in app/views/devise/registrations/edit.html.erb
     devise_parameter_sanitizer.permit(:account_update, keys: [:username, :photo])
   end
+
+  def default_url_options
+    { host: ENV["DOMAIN"] || "www.holdthatthought.xyz" }
+  end
 end
