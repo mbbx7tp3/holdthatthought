@@ -1,7 +1,8 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-
-          <p class="nav-link" style="color: black;"><%= link_to "Install", flashcard_path(@upcoming_flashcard) %> </p>
-
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <%=  image_tag "chrome.jpeg", class: "avatar dropdown-toggle", id: "navbarDropdown" %>
+  <p class="nav-link" style="color: black;"><%= link_to "Install", "https://chrome.google.com/webstore/category/extensions", :target => "_blank" %> </p>
+  </div>
 
 
 
