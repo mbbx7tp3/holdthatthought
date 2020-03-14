@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get 'plans/index'
   resources :flashcards, only: [:show]
   resources :flashcard_users, only: [:create]
-  resources :blacklists, only: [:destroy]
+  resources :blacklists, only: [:destroy, :create :new]
 
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
