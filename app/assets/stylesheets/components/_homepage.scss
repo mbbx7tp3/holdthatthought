@@ -3,6 +3,7 @@
   font-color: white;
   z-index: 1;
   position: absolute;
+  opacity: 0.95;
 }
 
 .intro-text h1 {
@@ -11,5 +12,40 @@
   padding: 80px;
 }
 
-// this file not being picked up :(
 
+.jumbotron {
+  min-height: 100%;
+  position: fixed;
+  overflow: hidden;
+  background-color: red;
+  margin-bottom: 0px;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    background: black;
+    opacity: 0.5;
+}
+
+
+.jumbotron-fluid {
+    padding-right: 0;
+    padding-left: 0;
+    border-radius: 0;
+}
+
+.tesben {
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}

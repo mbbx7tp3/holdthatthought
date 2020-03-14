@@ -1,6 +1,8 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  z-index: 1;
+  position: absolute;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -13,4 +15,8 @@
 
 a {
   color: black;
+}
+
+.holdthatthought {
+  justify-content: left;
 }
