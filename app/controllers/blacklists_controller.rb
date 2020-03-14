@@ -7,12 +7,14 @@ class BlacklistsController < ApplicationController
     redirect_to dashboard_path
   end
 
+
   def create
     @blacklist = Blacklist.new(blacklist_params)
     @user = current_user
     @blacklist.save
     redirect_to dashboard_path
   end
+
 
 
   private
