@@ -1,6 +1,6 @@
 .intro-text {
   height: 100vh;
-  color: #fd7c6f;
+  color: #fd0e14;
   z-index: 1;
   position: absolute;
   opacity: 1;
@@ -10,10 +10,10 @@
 
 .jumbotron {
   min-height: 100%;
-  width: 50%;
+  width: 100%;
   position: fixed;
   overflow: hidden;
-  background-color: #fd7c6f;
+  // background-color: ;
   margin-bottom: 0px;
 }
 
@@ -25,7 +25,7 @@
     left: 0px;
     z-index: 2;
     background: black;
-    opacity: 0.4;
+    opacity: 0.5;
 }
 
 

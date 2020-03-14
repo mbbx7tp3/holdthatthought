@@ -17,7 +17,7 @@ class PagesController < ApplicationController
     @blacklist = Blacklist.new
   end
 
-  def sign_up
+  def forms
     @user = current_user
   end
 
