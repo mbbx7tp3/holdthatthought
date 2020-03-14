@@ -62,3 +62,10 @@ margin-top: 15px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
+
+.website img {
+  padding: 15px;
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
