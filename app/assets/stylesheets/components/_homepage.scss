@@ -5,6 +5,8 @@
   position: absolute;
   opacity: 1;
   margin-top: 250px;
+  padding: 50px;
+  margin-bottom: 50px;
   // text-shadow: 0px 0px 4px rgba(0,0,0,0.2);
 }
 
@@ -13,7 +15,7 @@
   width: 100%;
   position: fixed;
   overflow: hidden;
-  // background-color: ;
+  background-color: white;
   margin-bottom: 0px;
 }
 
@@ -24,10 +26,9 @@
     top: 0px;
     left: 0px;
     z-index: 2;
-    background: black;
-    opacity: 0.5;
+    background: white;
+    opacity: 1;
 }
-
 
 .jumbotron-fluid {
     padding-right: 0;
@@ -45,3 +46,5 @@
   object-fit: cover;
   opacity: 0.9;
 }
+
+

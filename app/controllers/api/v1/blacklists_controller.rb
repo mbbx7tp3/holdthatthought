@@ -25,8 +25,6 @@ class Api::V1::BlacklistsController < Api::V1::BaseController
       # TO DO: CHECK IF WEBSITE_NAME ALREADY EXISTS
       existing_blacklist = Blacklist.where(website_name: website_name)
 
-
-
       unless existing_blacklist[0]
 
         # If Blacklist doesn't exist yet
