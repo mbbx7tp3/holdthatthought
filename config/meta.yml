@@ -1,5 +1,5 @@
 meta_product_name: "Hold That Thought"
 meta_title: "Hold that thought - Waste your time productively"
 meta_description: "Hold that thought helps you to time waste productively. Thinking of visiting Facebook? Hold that thought will block your access for five minutes to teach you Spanish, Klingon or anything else you want to learn!"
-meta_image: "Background.png" # should exist in `app/assets/images/`
+meta_image: "background_image.png" # should exist in `app/assets/images/`
 # twitter_account: "@product_twitter_account"   # required for Twitter Cards
