@@ -27,8 +27,22 @@ display: flex;
 align-items: center;
 }
 
+.row h2 {
+font-family: Roboto;
+font-style: normal;
+font-weight: 300;
+font-size: 30px;
+line-height: 35px;
+display: flex;
+align-items: center;
+}
+
 .header {
 height: 100px;
+}
+
+.sub-header {
+height: 70px;
 }
 
 .top-right {

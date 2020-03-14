@@ -4,14 +4,14 @@
       <div class="header">
       <h1> Your Blocked Websites </h1>
       </div>
-      <div class="header">
-      <h1> Currently Blocking </h1>
+      <div class="sub-header">
+      <h2> Currently Blocking </h2>
       </div>
       <div class= "card-container-dashboard">
 
 
       <% @user.blacklists.each do |blacklist| %>
-      <div style="blacklist-website">
+      <div class="blacklist-website">
       <p class="website"> <%= image_tag blacklist.image_url, alt: "alttext" %> <%= blacklist.name %>  </p>
       </div>
       <% end %>
@@ -29,12 +29,10 @@
       <h1> Your Learning topics </h1>
       </div>
       <div class="header">
-      <h1> Currently Studying </h1>
+      <h2> Currently Studying </h2>
       </div>
       <div class= "card-container-dashboard">
-        <div class="card-product-dashboard">
-          text
-        </div>
+
       </div>
     </div>
     <div class="bottom-right">
