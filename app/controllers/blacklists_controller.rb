@@ -9,9 +9,10 @@ class BlacklistsController < ApplicationController
 
 
   def create
-    @blacklist = Blacklist.new(blacklist_params)
     @user = current_user
-    @blacklist.save
+    @blacklist = Blacklist.new(blacklist_params)
+    @blacklistUser = BlacklistUser.create(user: @user, blacklist: @blacklist)
+    @blacklistUser.save
     redirect_to dashboard_path
   end
 
