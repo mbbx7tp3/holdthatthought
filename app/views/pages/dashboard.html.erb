@@ -10,7 +10,10 @@
       <div class= "card-container-dashboard">
       <% @user.blacklists.each do |blacklist| %>
       <div class="blacklist-website">
-      <p class="website"> <%= image_tag blacklist.image_url, alt: "alttext" %> <%= blacklist.name %>  </p>
+      <p class="website"> <%= image_tag blacklist.image_url, alt: "alttext" %> <%= blacklist.name %>
+        <%= link_to 'Remove Website', blacklist_path(blacklist),
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %></p>
       </div>
       <% end %>
       </div>
