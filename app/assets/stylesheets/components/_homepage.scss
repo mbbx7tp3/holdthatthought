@@ -1,17 +1,12 @@
 .intro-text {
   height: 100vh;
-  font-color: white;
+  color: #fd7c6f;
   z-index: 1;
   position: absolute;
-  opacity: 0.95;
+  opacity: 1;
+  margin-top: 250px;
+  // text-shadow: 0px 0px 4px rgba(0,0,0,0.2);
 }
-
-.intro-text h1 {
-  color: white;
-  opacity: 0.75;
-  padding: 80px;
-}
-
 
 .jumbotron {
   min-height: 100%;
@@ -29,7 +24,7 @@
     left: 0px;
     z-index: 2;
     background: black;
-    opacity: 0.5;
+    opacity: 0.4;
 }
 
 

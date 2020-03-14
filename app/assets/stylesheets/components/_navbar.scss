@@ -3,6 +3,7 @@
   background: white;
   z-index: 1;
   position: absolute;
+  width: 100%;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -14,9 +15,5 @@
 }
 
 a {
-  color: black;
-}
-
-.holdthatthought {
-  justify-content: left;
+  color: grey;
 }
