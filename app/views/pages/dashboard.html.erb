@@ -6,11 +6,15 @@
       </div>
       <div class="header">
       <h1> Currently Blocking </h1>
-      <% @user.blacklists.each do |blacklist| %>
-      <p class="website"> <%= blacklist.name %>  <%= image_tag blacklist.image_url, alt: "alttext" %> </p>
-      <% end %>
       </div>
       <div class= "card-container-dashboard">
+
+
+      <% @user.blacklists.each do |blacklist| %>
+      <div style="blacklist-website">
+      <p class="website"> <%= image_tag blacklist.image_url, alt: "alttext" %> <%= blacklist.name %>  </p>
+      </div>
+      <% end %>
       </div>
     </div>
 
