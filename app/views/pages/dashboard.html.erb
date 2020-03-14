@@ -4,34 +4,23 @@
       <div class="header">
       <h1> Your Blocked Websites </h1>
       </div>
-      <div class="header">
-      <h1> Currently Blocking </h1>
+      <div class="sub-header">
+      <h2> Currently Blocking </h2>
       </div>
       <div class= "card-container-dashboard">
-        <div class="card-product-dashboard">
-          text
-        </div>
-        <div class="card-product-dashboard">
-          text
-        </div>
-        <div class="card-product-dashboard">
-          text
-        </div>
-        <div class="card-product-dashboard">
-          text
-        </div>
-        <div class="card-product-dashboard">
-          text
-        </div>
-        <div class="card-product-dashboard">
-          text
-        </div>
+      <% @user.blacklists.each do |blacklist| %>
+      <div class="blacklist-website">
+      <p class="website"> <%= image_tag blacklist.image_url, alt: "alttext" %> <%= blacklist.name %>  </p>
       </div>
+      <% end %>
+      </div>
+
     </div>
 
     <div class="bottom-left">
       <h1> Add a new website </h1>
     </div>
+
   </div>
 
   <div class="column-right">
@@ -39,17 +28,25 @@
       <div class="header">
       <h1> Your Learning topics </h1>
       </div>
-      <div class="header">
-      <h1> Currently Studying </h1>
+      <div class="sub-header">
+      <h2> Currently Studying </h2>
       </div>
       <div class= "card-container-dashboard">
-        <div class="card-product-dashboard">
-          text
+        <div class="blacklist-website">
+          <p class="website"> <%= image_tag "logo.png", alt: "alttext" %>Le Wagon </p>
         </div>
       </div>
     </div>
     <div class="bottom-right">
       <h1> Other topics: </h1>
+      <div class= "card-container-dashboard">
+        <div class="blacklist-website">
+          <p class="website"> <%= image_tag "duo.png", alt: "alttext" %>Duo Lingo </p>
+        </div>
+          <div class="blacklist-website">
+          <p class="website"> <%= image_tag "elevate.png", alt: "alttext" %>Elevate </p>
+          </div>
+      </div>
     </div>
   </div>
 </div>
