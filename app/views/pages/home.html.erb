@@ -1,118 +1,43 @@
-<div class="jumbotron jumbotron-fluid">
-  <%= video_tag "homepagevid.mp4",autoplay: true, loop: true, muted: 'muted', :controls => false, :id => 'jumbo-video-home', class: "tesben" %>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <a class="navbar-brand" href="#">
+    <%= image_tag "pause_pink.png", alt: "alttext" %>
+</a>
+<div>
+   <a style= 'font-family: Overpass, sans-serif; font-size: 22px;'class="holdthatthought" href="#">hold that thought</a>
 </div>
 
-<!-- test -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class= "btn btn-ghost" href="#">Sign In</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="jumbotron jumbotron-fluid">
+  <div class ="overlay">
+  <%= video_tag "homepagevid.mp4",autoplay: true, loop: true, muted: 'muted', :controls => false, :id => 'jumbo-video-home', class: "tesben" %>
+  </div>
+</div>
 
 <header>
   <div class="intro-text">
-      <h1 style= 'font-family: Noto Serif JP;'>Hold That Thought</h1>
-      <h1 style= 'font-family: Noto Serif JP;'> Waste time, productively </h1>
+<!--       <h1 style= 'font-family: Overpass, sans-serif; font-size: 62px;'>Hold That Thought</h1>
+ -->      <h1 style= 'font-family: Overpass, sans-serif;'> waste time, productively </h1>
   </div>
 </header>
 
 
-<section>
-   <div class= "page2">
+<!-- <style>
 
-      <div class= "form-1 align-items-center" id= "form-1" style = "margin-bottom: 30px;">
-         <div class= "title">
-            <h3>What would you like to learn?</h3>
-         </div>
-              <div class= "card-container">
-                <div class="card-product" id="card" >
-                  <%= image_tag "logo.png", alt: "alttext" %>
-                  <div class="card-product-infos">
-                    <h2>Le Wagon</h2>
-                    <p>Change your life, learn to code</p>
-                </div>
-            </div>
-
-            <div class="card-product" id="card">
-              <%= image_tag "duo.png", alt: "alttext" %>
-
-              <div class="card-product-infos">
-                <h2>Duo Lingo</h2>
-                <p>The worlds best way to learn a language</p>
-              </div>
-            </div>
-
-            <div class="card-product" id="card">
-                <%= image_tag "elevate.png", alt: "alttext" %>
-
-                <div class="card-product-infos">
-                  <h2>Elevate</h2>
-                   <p>Stay sharp, build confidence, and boost productivity</p>
-                </div>
-            </div>
-        </div>
-           <div class= "arrow">
-            <a href="javascript:SwapDivsWithClick('form-1','form-2')" class="fas fa-arrow-right"></a>
-       </div>
-    </div>
- </div>
-</section>
-
-
-<!-- blacklist form -->
-
-
-<div class= "container" id="form-2" style= "display:none; transition: all 5s ease; margin-bottom: 30px; text-align: center;">
-
-<div class = "row">
-  <div class= "col" id= "title" style= "padding-bottom: 40px;">
-  <h3 style= "text-align: center;">What would you like to avoid?</h3>
-
-</div>
-</div>
-
-  <%= simple_form_for(@user, url: users_update_path, method: :patch) do |f| %>
-
-    <div class="form-group">
-      <input type="hidden" name="user[blacklist_ids][]" value="">
-      <div class="blacklist-choices m-0">
-        <% Blacklist.all.each do |blacklist| %>
-          <input type="checkbox" class="hidden" value="<%= blacklist.id %>" name="user[blacklist_ids][]" id="user_blacklist_ids_<%= blacklist.id %>">
-          <label for="user_blacklist_ids_<%= blacklist.id %>">
-            <div class = "blacklist-all">
-              <div class="blacklist-card" id= "blacklist-card">
-                <%= image_tag blacklist.image_url, alt: "alttext" %>
-                     <div class="blacklist-infos">
-                    <h2><%= blacklist.name %></h2>
-                  </div>
-              </div>
-           </div>
-         </label>
-        <% end %>
-      </div>
-    </div>
-    <%= f.submit "Create profile", class: "btn btn-ghost" %>
-   <% end %>
-  </div>
-</div>
-
-<!-- swap divs JS function -->
-
-<script type="text/javascript">
-function SwapDivsWithClick(div1,div2)
-{
-   d1 = document.getElementById(div1);
-   d2 = document.getElementById(div2);
-   if( d2.style.display == "none" )
-   {
-      d1.style.display = "none";
-      d2.style.display = "block";
-   }
-   else
-   {
-      d1.style.display = "block";
-      d2.style.display = "none";
-   }
-}
-</script>
-
-<style>
-  .tesben {
+ .tesben {
   position: fixed;
   z-index: 0;
   top: 0;
@@ -121,6 +46,22 @@ function SwapDivsWithClick(div1,div2)
   height: 100%;
   object-fit: cover;
   opacity: 0.9;
-}</style>
+}
+
+.intro-text {
+  height: 100vh;
+  font-color: white;
+  z-index: 1;
+  position: absolute;
+  padding-top: 20px;
+}
+
+.intro-text h1 {
+  color: black;
+  opacity: 0.75;
+  padding: 10px;
+
+}
+</style> -->
 
 
