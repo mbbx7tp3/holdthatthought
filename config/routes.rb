@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   get 'dashboard', to: "pages#dashboard", as: :dashboard
-  get 'sign_up', to: "pages#sign_up", as: :sign_up
+  get 'forms', to: "pages#forms", as: :forms
   get 'plans/index'
   resources :flashcards, only: [:show]
   resources :flashcard_users, only: [:create]

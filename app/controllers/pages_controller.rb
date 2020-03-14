@@ -16,7 +16,7 @@ class PagesController < ApplicationController
     @upcoming_flashcard = FlashcardUser.where(user_id: @user.id).where(completed: false).first.flashcard
   end
 
-  def sign_up
+  def forms
     @user = current_user
   end
 
