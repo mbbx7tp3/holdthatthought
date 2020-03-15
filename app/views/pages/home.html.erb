@@ -19,19 +19,35 @@
   </div>
 </div>
 
-<div class="jumbotron jumbotron-fluid">
-  <div class ="overlay">
-  <%= video_tag "homepagevid.mp4",autoplay: true, loop: true, muted: 'muted', :controls => false, :id => 'jumbo-video-home', class: "tesben" %>
-  </div>
-</div>
-
 <header>
-  <div class="intro-text">
-   <h1 style="font-size: 50px; padding-bottom: 50px;"> Waste your time productively </h1>
-    <a class= "btn btn-ghost" href="/dashboard">Get Started</a>
+  <div class="jumbotron jumbotron-fluid">
+    <div class ="overlay">
+    <%= video_tag "homepagevid.mp4",autoplay: true, loop: true, muted: 'muted', :controls => false, :id => 'jumbo-video-home', class: "tesben" %>
+    </div>
   </div>
-  <div>
-  </div>
+
+    <div class="intro-text">
+     <h1 style="font-size: 50px; padding-bottom: 50px;"> Waste your time productively </h1>
+      <a class= "btn btn-ghost" href="/dashboard">Get Started</a>
+    </div>
+    <div>
+    </div>
 </header>
 
+<section class ="info-section">
+    <div>
+    <h1>Next page scroll test</h1>
+  </div>
+</section>
 
+<script>
+  function bgChanger(){
+ if(this.scrollY > this.innerHeight / 1.5) {
+  document.body.classList.add("jumbotron jumbotron-fluid");
+ } else {
+  document.body.classList.remove("jumbotron jumbotron-fluid");
+ }
+}
+
+window.addEventListener("scroll", bgChanger);
+</script>

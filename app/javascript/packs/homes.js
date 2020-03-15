@@ -20,9 +20,9 @@ document.querySelectorAll("#blacklist-card").forEach((card) => {
 
 function bgChanger(){
  if(this.scrollY > this.innerHeight / 1.5) {
-  document.body.classList.add("bg-active");
+  document.body.classList.add("jumbotron jumbotron-fluid");
  } else {
-  document.body.classList.remove("bg-active");
+  document.body.classList.remove("jumbotron jumbotron-fluid");
  }
 }
 
