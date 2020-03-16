@@ -17,10 +17,10 @@
                    data: { confirm: 'Are you sure?' } %></p>
         <% else %>
 
-          <p class="website"> <%= image_tag "unnamed.png", alt: "alttext" %> <%= blacklist.name %>
-            <%= link_to 'Remove Website', blacklist_path(blacklist),
+          <p class="website"> <%= image_tag "unnamed.png", alt: "alttext" %> <%= blacklist.name %> </p>
+            <p> <%= link_to "remove website", blacklist_path(blacklist),
                    method: :delete,
-                   data: { confirm: 'Are you sure?' } %></p>
+                   data: { confirm: 'Are you sure?' } %> </p>
           <% end %>
 
       </div>
