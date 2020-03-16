@@ -21,6 +21,12 @@ class PagesController < ApplicationController
     @user = current_user
   end
 
+  def blockedwebsite
+    @user = current_user
+    @blacklists = @user.blacklists
+    @blacklist = Blacklist.new
+  end
+
   def payment
     @user = current_user
   end

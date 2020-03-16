@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   get 'dashboard', to: "pages#dashboard", as: :dashboard
+  get 'blockedwebsite', to: 'pages#blockedwebsite', as: :blockedwebsite
   get 'forms', to: "pages#forms", as: :forms
   get 'plans/index'
   resources :flashcards, only: [:show]

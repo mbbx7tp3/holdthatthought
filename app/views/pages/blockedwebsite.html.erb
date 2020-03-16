@@ -1,0 +1,11 @@
+
+<h1> Block Another Website </h1>
+      <div>
+      <%= simple_form_for @blacklist, url: blacklists_path, method: :post do |f| %>
+      <%= f.input :website_name, required: true, autofocus: true, label: "Name of Blocked Website" %>
+      <%= f.input :website_url, required: true, autofocus: true, label: "Website" %>
+
+      <%= f.button :submit, class: "btn btn-ghost"%>
+      <% end %>
+      </div>
+
