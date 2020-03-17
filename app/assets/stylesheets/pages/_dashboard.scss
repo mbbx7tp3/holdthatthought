@@ -2,30 +2,29 @@
   height: 1200px;
 }
 
-.column-left {
-  float: left;
-  width: 50%;
-  padding-left: 50px;
-  padding-top: 50px;
-  border-right: 2px solid white;
+.column {
+  position: absolute;
+  width: 100px;
+  padding-left: 320px;
+  margin-top: 129px;
 }
 
-.column-right {
-  float: right;
-  width: 50%;
-  padding-left: 50px;
-  padding-top: 50px;
+.title {
+  width: 676px;
+  height: 60px;
 }
 
-.row h1 {
-font-family: Roboto;
+.title h1 {
+font-family: Bellota;
 font-style: normal;
-font-weight: 300;
-font-size: 35px;
-line-height: 41px;
+font-weight: bold;
+font-size: 48px;
+line-height: 60px;
 display: flex;
 align-items: center;
+color: rgba(25, 41, 101, 0.8);
 }
+
 
 .row h2 {
 font-family: Roboto;
