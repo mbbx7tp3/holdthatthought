@@ -19,7 +19,11 @@
   </div>
 </div>
 
-<header>
+<div style= "height: 66px;">
+
+</div>
+
+<header class = "video">
   <div class="jumbotron jumbotron-fluid">
     <div class ="overlay">
     <%= video_tag "homepagevid.mp4",autoplay: true, loop: true, muted: 'muted', :controls => false, :id => 'jumbo-video-home', class: "tesben" %>
@@ -34,20 +38,44 @@
     </div>
 </header>
 
-<section class ="info-section">
-    <div>
-    <h1>Next page scroll test</h1>
+<section>
+
+    <div class = "container">
+      <div class ="row justify-content-center">
+      <div class="col-lg-6">
+        <h2 style = "padding-top: 40px;">Hold That Thought is a browser extension to remind you to spend a few moments learning a topic of your choice, before allowing you access to the websites you're seeking to avoid</h1>
+      </div>
+    </div>
+    </div>
   </div>
+
+  <div class = "container">
+      <div class= "row">
+    <div class="col-md-6 col-lg-8">
+      <h2>Simply login, manage your list of blacklisted websites and leaning topics online, download our browswer extension, and let us do the rest!</h1>
+    </div>
+     <div class="col-md-6 col-lg-8">
+      <h2>Simply login, manage your list of blacklisted websites and leaning topics online, download our browswer extension, and let us do the rest!</h1>
+    </div>
+  </div>
+
+    </div>
+
+
 </section>
 
-<script>
-  function bgChanger(){
- if(this.scrollY > this.innerHeight / 1.5) {
-  document.body.classList.add("jumbotron jumbotron-fluid");
+<!-- <script>
+
+  const bgChanger = () => {
+ if(window.scrollY > window.innerHeight / 3 ) {
+  document.querySelector(".info-section").classList.remove("d-none");
+  document.querySelector(".video").classList.add("d-none")
  } else {
-  document.body.classList.remove("jumbotron jumbotron-fluid");
+  document.querySelector(".video").classList.remove("d-none");
+  document.querySelector(".info-section").classList.add("d-none");
+
  }
 }
 
 window.addEventListener("scroll", bgChanger);
-</script>
+</script> -->

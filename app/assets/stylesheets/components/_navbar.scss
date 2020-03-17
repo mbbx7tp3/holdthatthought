@@ -1,8 +1,8 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
-  z-index: 1;
-  position: absolute;
+  z-index: 10000;
+  position: fixed;
   width: 100%;
 }
 

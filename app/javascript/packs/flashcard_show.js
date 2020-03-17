@@ -1,9 +1,11 @@
 console.log("Running flashcard_show.js...");
 
 let nextBtn = document.getElementById('next-btn');
+if (nextBtn) {
 nextBtn.addEventListener("click", function() {
   console.log("Next button clicked...");
 });
+}
 
 const openPage = () => {
   const tablinks = document.querySelectorAll(".tablinks");

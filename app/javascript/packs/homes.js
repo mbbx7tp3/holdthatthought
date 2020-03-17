@@ -18,15 +18,15 @@ document.querySelectorAll("#blacklist-card").forEach((card) => {
 
 // // background change on scroll
 
-function bgChanger(){
- if(this.scrollY > this.innerHeight / 1.5) {
-  document.body.classList.add("jumbotron jumbotron-fluid");
- } else {
-  document.body.classList.remove("jumbotron jumbotron-fluid");
- }
-}
+// function bgChanger(){
+//  if(this.scrollY > this.innerHeight / 1.5) {
+//   document.body.classList.add("jumbotron jumbotron-fluid");
+//  } else {
+//   document.body.classList.remove("jumbotron jumbotron-fluid");
+//  }
+// }
 
-window.addEventListener("scroll", bgChanger);
+// window.addEventListener("scroll", bgChanger);
 
 
 // // replacing form 1 with 2
