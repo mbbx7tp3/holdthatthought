@@ -3,6 +3,27 @@
     <div class="title">
       <h1> <%= @user.first_name %>'s Dashboard </h1>
     </div>
+
+    <div class="sub-title">
+      <h2> Your blacklisted websites </h2>
+    </div>
+
+    <div class="blacklist">
+      <div class="blocked-websites">
+        <% @user.blacklists.each do |blacklist| %>
+        <div class="website-card">
+          <p> <%= blacklist.name %> </p>
+          <%= link_to 'Remove Website', blacklist_path(blacklist),method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+        <% end %>
+
+
+      </div>
+
+    </div>
+
+
+
   </div>
 </div>
 
