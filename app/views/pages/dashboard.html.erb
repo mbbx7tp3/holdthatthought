@@ -1,47 +1,46 @@
 <div class="row">
-  <div class="column-left">
-    <div class="top-left">
-      <div class="header">
-      <h1> Your Blocked Websites </h1>
-      </div>
-      <div class="sub-header">
-      <h2> Currently Blocking </h2>
-      </div>
-      <div class= "card-container-dashboard">
-      <% @user.blacklists.each do |blacklist| %>
-      <div class="blacklist-website">
-        <% if blacklist.image_url.present? %>
-          <p class="website"> <%= image_tag blacklist.image_url, alt: "alttext" %> <%= blacklist.name %>
-            <%= link_to 'Remove Website', blacklist_path(blacklist),
-                   method: :delete,
-                   data: { confirm: 'Are you sure?' } %></p>
-        <% else %>
-
-          <p class="website"> <%= image_tag "unnamed.png", alt: "alttext" %> <%= blacklist.name %> </p>
-            <p> <%= link_to "remove website", blacklist_path(blacklist),
-                   method: :delete,
-                   data: { confirm: 'Are you sure?' } %> </p>
-          <% end %>
-
-      </div>
-      <% end %>
-
-      </div>
-      <a class= "btn btn-ghost" href="/blockedwebsite" style="margin-top: 20px"> Add A blocked website </a>
+  <div class="column">
+    <div class="title">
+      <h1> <%= @user.first_name %>'s Dashboard </h1>
     </div>
-  </div>
 
-  <div class="column-right">
+    <div class="sub-title">
+      <h2> Your blacklisted websites </h2>
+    </div>
 
-      <div class="header">
-      <h1> Your Learning topics </h1>
+    <div class="blacklist">
+      <div class="blocked-websites">
+        <% @user.blacklists.each do |blacklist| %>
+        <div class="website-card">
+          <p> <%= blacklist.name %> </p>
+          <%= link_to 'Remove Website', blacklist_path(blacklist),method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+        <% end %>
       </div>
-      <div class="sub-header">
-      <h2> Currently Studying </h2>
+
+      <div style="margin-top: 20px; text-align: right;">
+        <a class= "btn btn-ghost" href="/blockedwebsite"> Add another website </a>
       </div>
-      <div class= "card-container-dashboard">
-        <div class="blacklist-website">
-          <p class="website"> <%= image_tag "logo.png", alt: "alttext" %>Le Wagon </p>
+
+    </div>
+
+    <div class="learning">
+      <div class="sub-title">
+      <h2> Your learning topics </h2>
+      </div>
+        <div class="blocked-websites">
+        <div class="website-card">
+          <p> Le Wagon </p>
+          <a> Remove website </a>
         </div>
       </div>
+      <div style="margin-top: 20px; text-align: right;">
+        <a class= "btn btn-ghost" href="#"> Add another learning topic </a>
+      </div>
+    </div>
+
+
+
+  </div>
 </div>
+
