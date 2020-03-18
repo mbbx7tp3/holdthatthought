@@ -6,7 +6,9 @@
 }
 
 .btn-ghost:hover {
-  opacity: 0.5;
+  background-color: #faafff;
+  color: white;
+  transform: translate(-2px, -1px);
 }
 
 .btn-flat {
