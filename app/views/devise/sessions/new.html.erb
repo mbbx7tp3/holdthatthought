@@ -1,23 +1,27 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80); height: 900px;">
-  <h2 style="color: white; text-align: center; ">Log into Hold That Thought</h2>
+<div class="login-page-container d-flex justify-content-center align-items-center">
 
-  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class="form-inputs" style="width: 50%; margin: auto; text-align: center; color: white;">
-      <%= f.input :email,
-                  required: false,
-                  autofocus: true,
-                  input_html: { autocomplete: "email" } %>
-      <%= f.input :password,
-                  required: false,
-                  input_html: { autocomplete: "current-password" } %>
-      <a href="/users/password/new" style="color: white;" > Forgot your password?</a>
-    </div>
+  <div class="login-card-container">
 
-    <div class="form-actions" style="text-align: center; margin-top: 20px;">
-      <%= f.button :submit, "Log in", class: 'btn btn-primary' %>
-    </div>
-  <% end %>
-  <div style="text-align: center; margin-top: 20px;">
-  <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary" %>
+    <h4 class="text-center">Logging you in...</h4>
+
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="form-inputs">
+        <%= f.input :email,
+                    label: 'Email:',
+                    required: false,
+                    autofocus: true,
+                    input_html: { autocomplete: "email" } %>
+        <%= f.input :password,
+                    label: 'Password:',
+                    required: false,
+                    input_html: { autocomplete: "current-password" } %>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, "Login", class: 'btn-login' %>
+      </div>
+    <% end %>
+
   </div>
 
+</div>
