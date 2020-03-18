@@ -1,7 +1,8 @@
 // body
 
 body {
-  background-color: #ffe8eb;
+  background-color: white;
+  font-family: sans-serif;
   transition: all 0.5s ease;
 }
 
@@ -69,5 +70,102 @@ section {
   margin-left: 50px;
 }
 
-// Copy _homevideo.scss
+// video
+
+// .videohidden {
+//   transform: scale(0);
+// }
+
+.video {
+  position: relative;
+}
+
+.intro-text {
+  height: 100vh;
+  color: #192965;
+  z-index: 1000;
+  position: absolute;
+  opacity: 1;
+  margin-top: 250px;
+  padding: 50px;
+  margin-bottom: 50px;
+  // text-shadow: 0px 0px 4px rgba(0,0,0,0.2);
+}
+
+.jumbotron {
+  min-height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  background-color: white;
+  margin-bottom: 0px;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    background: white;
+    opacity: 1;
+}
+
+.jumbotron-fluid {
+    padding-right: 0;
+    padding-left: 0;
+    border-radius: 0;
+}
+
+.tesben {
+  position: relative;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.login {
+  display: flex;
+  justify-content: content;
+  color: #192965;
+  padding: 60px;
+  padding-left: 30%;
+}
+
+.login h2 {
+  font-size: 25px;
+}
+
+.htt {
+  display: flex;
+  justify-content: center;
+  color: #192965;
+  padding: 20px;
+  padding-left: 30%;
+  padding-top: 100px;
+  font-size: 20px;
+}
+
+.htt h2 {
+  font-size: 25px;
+  align-text: center;
+}
+
+.img {
+  display: flex;
+  max-height: 10px;
+  max-width: 10px;
+}
+
+.style-image {
+  display: flex;
+  max-height: 10px;
+  max-width: 10px;
+
+}
 

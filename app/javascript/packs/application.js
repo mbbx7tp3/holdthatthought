@@ -3,4 +3,4 @@ import "./homes";
 import "./dashboard";
 import "./flashcard_show";
 
-openPage();
+// openPage();
