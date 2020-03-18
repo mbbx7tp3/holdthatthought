@@ -1,5 +1,4 @@
 class FlashcardUsersController < ApplicationController
-
   def create
     @flashcard_user = FlashcardUser.new(user: current_user, flashcard_id: params[:flashcard_id], completed: true)
     if @flashcard_user.save
@@ -12,10 +11,6 @@ class FlashcardUsersController < ApplicationController
   private
 
   def find_next_flashcard
-      Flashcard.find(params[:flashcard_id].to_i + 1)
+    Flashcard.find(params[:flashcard_id].to_i + 1)
   end
-
-
-
-
 end
