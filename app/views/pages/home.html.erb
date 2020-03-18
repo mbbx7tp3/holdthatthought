@@ -28,15 +28,16 @@
     <div class ="overlay">
     <%= video_tag "homepagevid.mp4",autoplay: true, loop: true, muted: 'muted', :controls => false, :id => 'jumbo-video-home', class: "tesben" %>
     </div>
-  </div>
-
-    <div class="intro-text">
-     <h1 style="font-size: 50px; padding-bottom: 50px;"> Waste your time productively </h1>
-      <a class= "btn btn-ghost" href="/dashboard">Get Started</a>
-    </div>
-    <div>
-    </div>
-</header>
+<header>
+  <div class="intro-text">
+   <h1 style="font-size: 50px; padding-bottom: 50px;"> Waste your time productively </h1>
+    <% if user_signed_in? %>
+      <a class= "btn btn-ghost" href="/dashboard">Dashboard</a>
+      <a class= "btn btn-ghost" href="https://chrome.google.com/webstore/category/extensions" target='_blank'>Download</a>
+    <% else %>
+      <a class= "btn btn-ghost" href="/users/sign_up">Get Started</a>
+    <% end %>
+ </header>
 
 <section>
 

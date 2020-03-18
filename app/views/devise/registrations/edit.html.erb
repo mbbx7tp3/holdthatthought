@@ -22,7 +22,7 @@
                   input_html: { autocomplete: "current-password" } %>
 
       <div class="form-actions">
-      <%= f.button :submit, "Update",  class: "btn btn-info btn-lg" %>
+      <%= f.button :submit, "Update",  class: "btn btn-ghost" %>
       </div>
 
       <h3 style="margin-top: 20px;"> Change Password </h3>
@@ -42,12 +42,12 @@
     </div>
 
     <div class="form-actions">
-      <%= f.button :submit, "Change password",  class: "btn btn-info btn-lg" %>
+      <%= f.button :submit, "Change password",  class: "btn btn-ghost" %>
     </div>
   <% end %>
 
   <div>
-  <p class="btn btn-info btn-lg" style="margin-top: 20px;"> <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+  <p class="btn btn-ghost" style="margin-top: 20px;"> <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
   </div>
-  <p class="btn btn-info btn-lg"> <%= link_to "Back to my dashboard", :back %> </p>
+  <p class="btn btn-ghost"> <%= link_to "Back to my dashboard", :back %> </p>
 </div>

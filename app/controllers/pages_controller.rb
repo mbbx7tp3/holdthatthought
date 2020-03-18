@@ -1,13 +1,12 @@
 class PagesController < ApplicationController
+  before_action :authenticate_user!, except: [:home]
+
   def home
     if current_user
       @user = current_user
     else
       @user = User.new
     end
-    # @blacklist_user = BlacklistUser.new
-
-    # @blacklist_options = Blacklist.all
   end
 
   def dashboard
@@ -21,8 +20,13 @@ class PagesController < ApplicationController
     @user = current_user
   end
 
+  def blockedwebsite
+    @user = current_user
+    @blacklists = @user.blacklists
+    @blacklist = Blacklist.new
+  end
+
   def payment
     @user = current_user
   end
-
 end

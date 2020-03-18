@@ -39,13 +39,13 @@
   </head>
   <body>
 
+    <%= render 'shared/navbar' %>
     <% if params[:controller] == 'pages' && params[:action] == 'dashboard' %>
-      <%= render 'shared/navbar' %>
       <%= render 'shared/flashes' %>
     <% end %>
-
     <%= yield %>
     <%= javascript_include_tag "application" %>
     <%= javascript_pack_tag 'application' %>
+
   </body>
 </html>

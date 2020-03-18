@@ -2,91 +2,95 @@
   height: 1200px;
 }
 
-.column-left {
-  float: left;
-  width: 50%;
-  padding-left: 50px;
-  padding-top: 50px;
-  border-right: 2px solid white;
+.column {
+  position: absolute;
+  padding-left: 320px;
+  margin-top: 129px;
 }
 
-.column-right {
-  float: right;
-  width: 50%;
-  padding-left: 50px;
-  padding-top: 50px;
+.title {
+  width: 676px;
+  height: 60px;
+}
+
+
+.title h1 {
+  font-family: Bellota;
 }
 
 .row h1 {
-font-family: Roboto;
-font-style: normal;
-font-weight: 300;
-font-size: 35px;
-line-height: 41px;
-display: flex;
-align-items: center;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 60px;
+  display: flex;
+  align-items: center;
+  color: rgba(25, 41, 101, 0.8);
 }
 
 .row h2 {
-font-family: Roboto;
-font-style: normal;
-font-weight: 300;
-font-size: 30px;
-line-height: 35px;
-display: flex;
-align-items: center;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 35px;
+  display: flex;
+  align-items: center;
 }
 
-.header {
-height: 100px;
+.sub-title {
+  margin-top: 40px;
+  width: 379px;
+  height: 32px;
 }
 
-.sub-header {
-height: 70px;
+.sub-title h2 {
+  font-family: Bellota;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 30px;
+  color: #192965;
 }
 
-.top-right {
-  height: 50%;
-}
-
-.bottom-right {
-  height: 50%;
-}
-
-.top-left {
-  height: 50%;
-}
-
-.bottom-left {
-  height: 50%;
-}
-
-.card-container-dashboard {
+.blocked-websites {
+  margin-top: 32px;
+  width: 800px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 
-.website img {
-  padding: 15px;
-  height: 100%;
-  width: 120px;
-  object-fit: cover;
+.website-card {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 8px rgba(188, 207, 255, 0.5);
+  border-radius: 42px;
+  margin-top: 12px;
+  height: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.website-card p {
+  padding-left: 58px;
+  padding-top: 8px;
+  padding-bottom: 10px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #192965;
+}
+
+.website-card a {
+  text-align: right;
+  padding-top: 8px;
+  padding-bottom: 10px;
+  padding-right: 15px;
+}
+
+.websitebutton {
+  margin-top: 20px;
 }
 
 
-.learn-website {
-  width: 300px;
-  background-color: white;
-  margin-top: 10px;
-  margin-right: 10px;
-  border-radius: 5px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
 
-.blacklist-website {
-  background-color: white;
-  margin-top: 10px;
-  margin-right: 10px;
-  border-radius: 5px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
- }

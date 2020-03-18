@@ -1,0 +1,88 @@
+.login-page-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f0efef;
+  // background-color: gray;
+}
+
+.login-card-container {
+  height: 275px;
+  width: 480px;
+  background-color: white;
+  border-radius: 24px;
+  box-shadow: 3px 4px 0px #BCCFFF;
+  padding: 24px;
+  position: relative;
+}
+
+.login-card-container > h4 {
+  margin-bottom: 36px;
+  margin-left: 90px;
+}
+
+.form-inputs {
+  font-family: Open Sans;
+  font-size: 16px;
+  color: #192965;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.form-group > label {
+  min-width: 90px;
+  font-size: 14px;
+  margin: 0;
+}
+
+.form-group > input {
+  border-radius: 18px;
+  color: #192965;
+  box-shadow: 0px 4px 8px rgba(188, 207, 255, .5);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  width: 432px;
+}
+
+
+.btn {
+  text-decoration: none;
+  transition: none;
+}
+
+.btn:hover {
+  color: rgba(188, 207, 255, 1);
+  transition: none;
+}
+
+.btn-login {
+  background-color: #192965;
+  font-family: Open Sans;
+  font-size: 16px;
+  color: white;
+  padding: 46px;
+  padding-top: 4px;
+  padding-bottom: 8px;
+  height: 32px;
+  border-radius: 16px;
+  box-shadow: 3px 4px 0px #faafff;
+  border: none;
+  text-decoration: none;
+  transition: none;
+  // transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s
+}
+
+.btn:hover {
+  text-decoration: none;
+  transition: none;
+}
