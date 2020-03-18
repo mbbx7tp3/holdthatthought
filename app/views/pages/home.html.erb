@@ -7,7 +7,12 @@
 <header>
   <div class="intro-text">
    <h1 style="font-size: 50px; padding-bottom: 50px;"> Waste your time productively </h1>
-    <a class= "btn btn-ghost" href="/users/sign_up">Get Started</a>
+    <% if user_signed_in? %>
+      <a class= "btn btn-ghost" href="/dashboard">Dashboard</a>
+      <a class= "btn btn-ghost" href="https://chrome.google.com/webstore/category/extensions" target='_blank'>Download</a>
+    <% else %>
+      <a class= "btn btn-ghost" href="/users/sign_up">Get Started</a>
+    <% end %>
   </div>
 </header>
 
