@@ -54,11 +54,22 @@
   width: 432px;
 }
 
+
+.btn {
+  text-decoration: none;
+  transition: none;
+}
+
+.btn:hover {
+  color: rgba(188, 207, 255, 1);
+  transition: none;
+}
+
 .btn-login {
   background-color: #192965;
   font-family: Open Sans;
   font-size: 16px;
-  color: #f0efef;
+  color: white;
   padding: 46px;
   padding-top: 4px;
   padding-bottom: 8px;
@@ -67,5 +78,11 @@
   box-shadow: 3px 4px 0px #faafff;
   border: none;
   text-decoration: none;
+  transition: none;
   // transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s
+}
+
+.btn:hover {
+  text-decoration: none;
+  transition: none;
 }
