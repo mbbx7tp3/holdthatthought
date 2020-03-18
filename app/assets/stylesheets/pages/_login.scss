@@ -17,6 +17,7 @@
 
 .login-card-container > h4 {
   margin-bottom: 36px;
+  margin-left: 90px;
 }
 
 .form-inputs {
@@ -57,9 +58,13 @@
   font-family: Open Sans;
   font-size: 16px;
   color: #f0efef;
-  padding: 6px 46px;
-  height: 40px;
-  border-radius: 20px;
+  padding: 46px;
+  padding-top: 4px;
+  padding-bottom: 8px;
+  height: 32px;
+  border-radius: 16px;
   box-shadow: 3px 4px 0px #faafff;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s
+  border: none;
+  text-decoration: none;
+  // transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s
 }

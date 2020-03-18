@@ -2,7 +2,7 @@
 
   <div class="login-card-container">
 
-    <h4 class="text-center">Logging you in...</h4>
+    <h4>Logging you in...</h4>
 
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="form-inputs">
@@ -18,7 +18,7 @@
       </div>
 
       <div class="form-actions">
-        <%= f.button :submit, "Login", class: 'btn-login' %>
+        <%= f.button :submit, "Log in", class: 'btn-login' %>
       </div>
     <% end %>
 
