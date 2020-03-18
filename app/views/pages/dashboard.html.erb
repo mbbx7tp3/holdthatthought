@@ -13,7 +13,9 @@
         <% @user.blacklists.each do |blacklist| %>
         <div class="website-card">
           <p> <%= blacklist.name %> </p>
-          <%= link_to 'Remove Website', blacklist_path(blacklist),method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to blacklist_path(blacklist),method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <i class="fas fa-minus-circle"></i>
+          <% end %>
         </div>
         <% end %>
       </div>
