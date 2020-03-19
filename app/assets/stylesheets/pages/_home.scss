@@ -146,11 +146,13 @@ section {
   justify-content: center;
   color: #192965;
   width: 31%;
-  position: absolute;
+  // position: absolute;
   bottom: 15px;
   right: 15px;
   font-size: 20px;
   z-index: 99;
+  padding: 30px;
+  margin-left: 33%;
 }
 
 .htt h2 {
@@ -162,6 +164,7 @@ section {
   display: flex;
   max-height: 10px;
   max-width: 10px;
+  z-index:100;
 }
 
 .style-image {
@@ -171,9 +174,10 @@ section {
 }
 
 .textbox {
-  text-align: left;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-  color: white;
+  text-align: right;
+  // background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  color: #192965;
+  border: #192965;
   border-radius: 5px;
 }
 
