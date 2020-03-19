@@ -132,8 +132,7 @@ section {
   display: flex;
   justify-content: content;
   color: #192965;
-  padding: 60px;
-  padding-left: 30%;
+  // padding: 60px;
 }
 
 .login h2 {
@@ -144,12 +143,12 @@ section {
   display: flex;
   justify-content: center;
   color: #192965;
-  width: 31%;
-  position: absolute;
+  // position: absolute;
   bottom: 15px;
   right: 15px;
   font-size: 20px;
   z-index: 99;
+  // padding: 30px;
 }
 
 .htt h2 {
@@ -157,22 +156,20 @@ section {
   align-text: center;
 }
 
-.img {
-  display: flex;
-  max-height: 10px;
-  max-width: 10px;
-}
 
-.style-image {
-  display: flex;
-  max-height: 10px;
-  max-width: 10px;
-}
+// .style-image {
+//   display: flex;
+//   max-height: 10px;
+//   max-width: 10px;
+// }
 
 .textbox {
-  text-align: left;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
-  color: white;
+  text-align: right;
+  // background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  color: #192965;
+  border: #192965;
+  margin-left: 400px;
   border-radius: 5px;
+  width: 800px;
 }
 
