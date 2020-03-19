@@ -1,10 +1,60 @@
-.signup {
-  margin-left: 20%;
-  margin-right: 20%;
+.signup-page-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background-color: yellow;
 }
 
-.SignupTitle {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  text-align: center;
+.signup-form-container {
+  width: 500px;
+  background-color: green;
+  margin-top: 130px;
+  margin-bottom: 100px;
 }
+
+h1.page-title {
+  font-family: Bellota;
+  font-size: 48px;
+  font-weight: bold;
+  color: rgba(25, 41, 101, 0.8);
+  margin-bottom: 80px;
+}
+
+h3.page-subtitle {
+  font-family: Bellota;
+  font-size: 24px;
+  font-weight: normal;
+  color: rgba(25, 41, 101, 1);
+  margin-top: 48px;
+  margin-bottom: 32px;
+}
+
+.signup-user-details {
+  background-color: red;
+}
+
+.form-option {
+  background-color: white;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+
+  font-family: Open Sans;
+  font-size: 16px;
+  border-radius: 18px;
+  box-shadow: 3px 4px 8px rgba(188, 207, 255, 0.5);
+}
+
+.form-selected {
+  background-color: red;
+}
+
+.signup-btn-container {
+  background-color: red;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 48px;
+}
+

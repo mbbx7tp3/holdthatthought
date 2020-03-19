@@ -39,6 +39,11 @@
   margin: 0;
 }
 
+// Deleting required asterisks from labels
+label > abbr {
+  display: none;
+}
+
 .form-group > input {
   border-radius: 18px;
   color: #192965;

@@ -1,5 +1,6 @@
 class Api::V1::BlacklistsController < Api::V1::BaseController
-  acts_as_token_authentication_handler_for User
+  acts_as_token_authentication_handler_for User, :except => [:signup]
+  # acts_as_token_authentication_handler_for User
 
   def index
     @blacklists = policy_scope(Blacklist)
@@ -64,4 +65,45 @@ class Api::V1::BlacklistsController < Api::V1::BaseController
       end
     end
   end
+
+  def signup
+    user_email = request.env["HTTP_X_USER_EMAIL"]
+    signup_user = User.find_by(email: user_email)
+
+    learning_topics_array = JSON::parse(request.env["HTTP_X_USER_LEARNING_TOPICS"])
+    blacklist_names_array = JSON::parse(request.env["HTTP_X_USER_BLACKLISTS"])
+
+    # Set user learning topics
+    signup_user["interest"] = learning_topics_array[0]
+    signup_user.save
+
+    # Set user blacklists
+    blacklist_names_array.each do |blacklist_name|
+      blacklist_instance = Blacklist.find_by(website_name: blacklist_name)
+      # Create new BlacklistUser
+      blacklist_user = BlacklistUser.create(user: signup_user, blacklist: blacklist_instance)
+      blacklist_user.save
+    end
+  end
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
