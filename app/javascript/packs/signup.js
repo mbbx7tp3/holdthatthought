@@ -15,25 +15,28 @@ btnJavascript.addEventListener('click', function(event) {
   event.preventDefault();
 
   const userEmail = document.getElementById('user_email').value;
-  const blacklistsArray = getBlacklistChoices();
-  const learningTopicsArray = ["Le Wagon"];
+  const learningTopicsArray = JSON.stringify(["Le Wagon"]);
+  const blacklistsArray = JSON.stringify(getBlacklistChoices());
 
   console.log(userEmail);
+  console.log(learningTopicsArray);
   console.log(blacklistsArray);
 
+  // Wait 1 sec?
 
   let endpoint = "http://localhost:3000/api/v1/blacklists/signup";
   let myInit = {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json',
-      'X-User-Email': `${loginEmail}`,
-      'X-User-Token': `${loginReturnToken}`
+      'X-User-Email': `${userEmail}`,
+      'X-User-Learning-Topics': `${learningTopicsArray}`,
+      'X-User-Blacklists': `${blacklistsArray}`
     }
   };
 
-  fetch(endpoint)
-    .then(response => response.json())
+  fetch(endpoint, myInit)
+    .then(response => response.text())
     .then((data) => {
       console.log("First blacklists added to user...");
     });

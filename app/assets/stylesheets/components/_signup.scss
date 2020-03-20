@@ -45,6 +45,11 @@ h3.page-subtitle {
   font-size: 16px;
   border-radius: 18px;
   box-shadow: 3px 4px 8px rgba(188, 207, 255, 0.5);
+  cursor: pointer;
+}
+
+.form-option > p {
+  pointer-events: none;
 }
 
 .form-selected {
