@@ -5,6 +5,7 @@
 //   console.log("Next button clicked...");
 // });
 
+
 // const openPage = () => {
 //   const tablinks = document.querySelectorAll(".tablinks");
 //   tablinks.forEach((link) => {
