@@ -1,48 +1,43 @@
-<div class="row">
-  <div class="column">
-    <div class="title">
-      <h1> <%= @user.first_name %>'s Dashboard </h1>
-    </div>
+<div class="dashboard-page-container">
+  <div class="dashboard-container">
 
-    <div class="sub-title">
-      <h2> Your blacklisted websites </h2>
-    </div>
+    <h1 class="page-title">Your dashboard...</h1>
 
-    <div class="blacklist">
-      <div class="blocked-websites">
-        <% @user.blacklists.each do |blacklist| %>
-        <div class="website-card">
-          <p> <%= blacklist.name %> </p>
+    <h3 class="page-subtitle">Your blacklisted websites</h3>
+
+    <div class="blacklisted-websites-container">
+      <% @user.blacklists.each do |blacklist| %>
+        <div class="blacklist-card">
+          <p><%= blacklist.website_name.capitalize() %></p>
           <%= link_to blacklist_path(blacklist),method: :delete, data: { confirm: 'Are you sure?' } do %>
-          <i class="fas fa-minus-circle"></i>
+            <i class="fas fa-minus-circle"></i>
           <% end %>
         </div>
-        <% end %>
-      </div>
+      <% end %>
 
-      <div style="margin-top: 20px; text-align: right;">
-        <a class= "btn btn-ghost" href="/blockedwebsite"> Add another website  <i class="fas fa-plus-circle" style="margin-left: 10px"></i> </a>
-      </div>
-
-    </div>
-
-    <div class="learning">
-      <div class="sub-title">
-      <h2> Your learning topics </h2>
-      </div>
-        <div class="blocked-websites">
-        <div class="website-card">
-          <p> Le Wagon </p>
-          <a>  <i class="fas fa-minus-circle"></i> </a>
-        </div>
-      </div>
-      <div style="margin-top: 20px; text-align: right;">
-        <a class= "btn btn-ghost" href="#"> Add another learning topic  <i class="fas fa-plus-circle" style="margin-left: 10px"></i> </a>
+      <div class="dashboard-btn-container">
+        <a href="/blockedwebsite" class="btn-ghost">
+          <p>Add another website</p>
+          <i class="fas fa-plus-circle"></i>
+        </a>
       </div>
     </div>
 
+    <h3 class="page-subtitle">Your learning topics</h3>
 
+    <div class="learning-topics-container">
+      <div class="learning-topic-card">
+        <p><%= @learning_topic %></p>
+        <i class="fas fa-minus-circle"></i>
+      </div>
 
+      <div class="dashboard-btn-container">
+        <a href="/blockedwebsite" class="btn-ghost">
+          <p>Add another learning topic</p>
+          <i class="fas fa-plus-circle"></i>
+        </a>
+      </div>
+    </div>
   </div>
 </div>
 
