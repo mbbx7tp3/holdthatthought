@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   post 'blacklist_users/create'
   get 'blacklist_users/edit'
   get 'blacklist_users/learn'
+  delete 'blacklist_users/destroy'
 
   devise_for :users
   get 'users/options'

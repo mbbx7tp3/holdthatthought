@@ -9,7 +9,12 @@
       <% @user.blacklists.each do |blacklist| %>
         <div class="blacklist-card">
           <p><%= blacklist.website_name.capitalize() %></p>
+
+          <!-- Needs to delete BlacklistUser not Blacklist -->
+
+          <%#= link_to blacklist_users_destroy_path(@user, blacklist), method: :delete, data: { confirm: 'Are you sure?' } do %>
           <%= link_to blacklist_path(blacklist),method: :delete, data: { confirm: 'Are you sure?' } do %>
+
             <i class="fas fa-minus-circle"></i>
           <% end %>
         </div>
