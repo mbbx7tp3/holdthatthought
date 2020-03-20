@@ -39,6 +39,13 @@
 
 .avatar {
   cursor: pointer;
+  height: 30px;
+  width: 30px;
+  margin: 5px 5px;
+}
+
+.avatar:hover {
+  box-shadow: 3px 4px 8px rgba(188, 207, 255, 1.00);
 }
 
 .dropdown-item {
