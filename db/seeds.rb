@@ -7,12 +7,12 @@ Flashcard.destroy_all
 Category.destroy_all
 Blacklist.destroy_all
 
-User.create!(
-  first_name: "Jonas",
-  last_name: "Vanbuel",
-  email: 'jonas.vanbuel@gmail.com',
-  password: 'holdthatthought',
-  password_confirmation: 'holdthatthought')
+# User.create!(
+#   first_name: "Jonas",
+#   last_name: "Vanbuel",
+#   email: 'jonas.vanbuel@gmail.com',
+#   password: 'holdthatthought',
+#   password_confirmation: 'holdthatthought')
 
 User.create!(
   first_name: "Jamie",
