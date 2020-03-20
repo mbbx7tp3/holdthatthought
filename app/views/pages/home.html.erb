@@ -12,7 +12,7 @@
    <h1 style="font-size: 50px; margin-bottom: 50px; margin-top: 350px;"> Waste your time productively </h1>
     <% if user_signed_in? %>
       <a class= "btn btn-ghost" href="/dashboard">Dashboard</a>
-      <a class= "btn btn-ghost" href="https://chrome.google.com/webstore/category/extensions" target='_blank'>Download</a>
+      <a class= "btn btn-ghost" href="https://github.com/jonasvanbuel/holdthatthought-extension" target='_blank'>Download</a>
     <% else %>
       <a class= "btn btn-ghost" href="/users/sign_up">Get Started</a>
     <% end %>
@@ -21,7 +21,7 @@
 
   <div class = "container htt d-flex align-items-flex-start pt-40">
   <div class = "container extimg">
-    <%= image_tag "illustration-tasks", alt: "alttext" %>
+    <%= image_tag "illustration-tasks.jpg", alt: "alttext" %>
   </div>
     <div class = "textbox" style = "padding: 100px; margin-top: 90px;">
       <h2>Hold That Thought... is a browser extension to remind you to spend a few moments learning a topic of your choice, before allowing you access to the websites you're seeking to avoid</h2>
