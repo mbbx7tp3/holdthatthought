@@ -1,13 +1,13 @@
 .signup-page-container {
   width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
-  background-color: yellow;
+  background-color: rgba(240, 239, 239, 1.00);
 }
 
 .signup-form-container {
   width: 500px;
-  background-color: green;
   margin-top: 130px;
   margin-bottom: 100px;
 }
@@ -29,9 +29,8 @@ h3.page-subtitle {
   margin-bottom: 32px;
 }
 
-.signup-user-details {
-  background-color: red;
-}
+// .signup-user-details {
+// }
 
 .form-option {
   background-color: white;
@@ -53,11 +52,12 @@ h3.page-subtitle {
 }
 
 .form-selected {
-  background-color: red;
+  font-weight: 600;
+  background-color: rgba(188, 207, 255, 1.00);
+  box-shadow: 3px 4px 0px rgba(250, 175, 255, 1.00);
 }
 
 .signup-btn-container {
-  background-color: red;
   display: flex;
   justify-content: flex-end;
   margin-top: 48px;

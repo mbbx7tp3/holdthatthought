@@ -42,10 +42,6 @@ btnJavascript.addEventListener('click', function(event) {
       console.log("First blacklists added to user...");
       document.location.href = "http://localhost:3000/dashboard";
     });
-
-  // Redirect to dashboard?
-
-
 });
 
 
