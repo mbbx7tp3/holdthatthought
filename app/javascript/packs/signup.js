@@ -9,7 +9,6 @@ function getBlacklistChoices() {
   return blacklistsArray;
 };
 
-
 const btnJavascript = document.querySelector('.btn-js');
 console.log(btnJavascript);
 btnJavascript.addEventListener('click', function(event) {
@@ -24,7 +23,6 @@ btnJavascript.addEventListener('click', function(event) {
   console.log(learningTopicsArray);
   console.log(blacklistsArray);
 
-  // Wait 1 sec before making API call so User can be generated first!
   let endpoint = "http://www.holdthatthought.xyz/api/v1/blacklists/signup";
   let myInit = {
     method: 'POST',
