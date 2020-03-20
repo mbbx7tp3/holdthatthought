@@ -10,8 +10,8 @@ function getBlacklistChoices() {
 };
 
 
-const btnJs = document.getElementById('btn-js');
-btnJs.addEventListener('click', function(event) {
+const btnJavascript = document.getElementById('btn-js');
+btnJavascript.addEventListener('click', function(event) {
   event.preventDefault();
 
   const userEmail = document.getElementById('user_email').value;
@@ -22,7 +22,33 @@ btnJs.addEventListener('click', function(event) {
   console.log(blacklistsArray);
 
 
+  let endpoint = "http://localhost:3000/api/v1/blacklists/signup";
+  let myInit = {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-User-Email': `${loginEmail}`,
+      'X-User-Token': `${loginReturnToken}`
+    }
+  };
 
-
-
+  fetch(endpoint)
+    .then(response => response.json())
+    .then((data) => {
+      console.log("First blacklists added to user...");
+    });
 });
+
+
+const formOptions = document.querySelectorAll('.form-option');
+formOptions.forEach((formOption) => {
+  formOption.addEventListener('click', function(event) {
+    event.target.classList.toggle('form-selected');
+  });
+});
+
+
+
+
+
+
