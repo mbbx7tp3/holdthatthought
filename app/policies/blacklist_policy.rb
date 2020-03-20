@@ -12,4 +12,8 @@ class BlacklistPolicy < ApplicationPolicy
   def create?
     true
   end
+
+  def signup?
+    true
+  end
 end
