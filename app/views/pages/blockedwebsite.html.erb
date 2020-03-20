@@ -1,22 +1,22 @@
-<div class="row">
-  <div class="column">
-    <div class="title">
-    <h1> Block Another Website </h1>
-    </div>
-    <div class="blockform">
-          <%= simple_form_for @blacklist, url: blacklists_path, method: :post do |f| %>
-          <%= f.input :website_name, required: true, autofocus: true, label: "Name of Blocked Website" %>
-          <%= f.input :website_url, required: true, autofocus: true, label: "Website" %>
-          <div class="blockwebsite">
-          <%= f.button :submit, "Block Website", class: "btn btn-ghost" %>
-          </div>
-          <% end %>
-    </div>
-    <h2 style="margin-top: 30px;"> Suggested Websites </h2>
-    <div class="website-card">
-      <p> Daily Mail </p>
-      <p style="text-align: right; padding-right: 20px;"> <i class="fas fa-plus-circle"></i> </p>
-    </div>
+<div class="new-blacklist-page-container">
+
+  <div class="new-blacklist-form">
+
+    <h3 class="page-subtitle">Add another blacklisted website...</h3>
+
+      <%= simple_form_for @blacklist, url: blacklists_path, method: :post do |f| %>
+
+        <div class="form-inputs">
+          <%= f.input :website_name, required: true, autofocus: true, label: "Name:" %>
+          <%= f.input :website_url, required: true, autofocus: true, label: "Url:" %>
+        </div>
+
+        <div class="new-blacklist-btn-container">
+          <%= f.button :submit, "Blacklist website", class: "btn-ghost" %>
+        </div>
+      <% end %>
+
   </div>
+
 </div>
 

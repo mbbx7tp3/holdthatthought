@@ -24,7 +24,7 @@ Rails.application.routes.draw do
       get 'login_return_token', to: 'tokens#login_return_token'
       resources :blacklists, only: [ :index ]
       patch 'blacklists/create', to: 'blacklists#create'
-      patch 'blacklists/signup', to: 'blacklists#signup'
+      post 'blacklists/signup', to: 'blacklists#signup'
       resources :flashcards, only: [ :index, :show, :update ]
     end
   end

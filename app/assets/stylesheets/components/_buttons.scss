@@ -1,0 +1,27 @@
+.btn,
+.btn-ghost {
+  font-family: Open Sans;
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+  background-color: #192965;
+  padding: 8px 32px;
+  padding-top: 4px;
+  height: 32px;
+  border-radius: 50px;
+  border: none;
+  transition: none;
+}
+
+.btn:hover,
+.btn-ghost:hover {
+  color: white;
+  // transform: translate(-2px, -1px);
+  box-shadow: 3px 4px 8px rgba(188, 207, 255, 1);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
