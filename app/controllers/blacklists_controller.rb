@@ -1,7 +1,9 @@
 class BlacklistsController < ApplicationController
   def destroy
+    @user = current_user
     @blacklist = Blacklist.find(params[:id])
-    @blacklist.destroy
+    blacklist_user = BlacklistUser.find_by(user: @user, blacklist: @blacklist)
+    blacklist_user.destroy
     redirect_to dashboard_path
   end
 
