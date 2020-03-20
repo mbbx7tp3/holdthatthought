@@ -25,6 +25,7 @@
 .nav-item,
 .nav-link,
 .active {
+  font-family: Open Sans;
   font-size: 16px;
   font-weight: normal;
   color: #192965;
@@ -34,6 +35,10 @@
 .dropdown-menu {
   border-radius: 8px;
   border: 1px solid rgba(25, 41, 101, 0.4);
+}
+
+.avatar {
+  cursor: pointer;
 }
 
 .dropdown-item {

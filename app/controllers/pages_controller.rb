@@ -14,6 +14,7 @@ class PagesController < ApplicationController
     @blacklists = @user.blacklists
     # @upcoming_flashcard = FlashcardUser.where(user_id: @user.id).where(completed: false).first.flashcard
     @blacklist = Blacklist.new
+    @learning_topic = @user.interest
   end
 
   def forms
