@@ -10,8 +10,10 @@ function getBlacklistChoices() {
 };
 
 
-const btnJavascript = document.getElementById('btn-js');
+const btnJavascript = document.querySelector('.btn-js');
+console.log(btnJavascript);
 btnJavascript.addEventListener('click', function(event) {
+  console.log("Mouse clicked and function started...");
   event.preventDefault();
 
   const userEmail = document.getElementById('user_email').value;
@@ -22,8 +24,7 @@ btnJavascript.addEventListener('click', function(event) {
   console.log(learningTopicsArray);
   console.log(blacklistsArray);
 
-  // Wait 1 sec?
-
+  // Wait 1 sec before making API call so User can be generated first!
   let endpoint = "http://localhost:3000/api/v1/blacklists/signup";
   let myInit = {
     method: 'PATCH',
@@ -39,7 +40,12 @@ btnJavascript.addEventListener('click', function(event) {
     .then(response => response.text())
     .then((data) => {
       console.log("First blacklists added to user...");
+      document.location.href = "http://localhost:3000/dashboard";
     });
+
+  // Redirect to dashboard?
+
+
 });
 
 
@@ -49,9 +55,4 @@ formOptions.forEach((formOption) => {
     event.target.classList.toggle('form-selected');
   });
 });
-
-
-
-
-
 

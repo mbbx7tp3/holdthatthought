@@ -12,4 +12,8 @@ class ApplicationController < ActionController::Base
   def default_url_options
     { host: ENV["DOMAIN"] || "www.holdthatthought.xyz" }
   end
+
+  def after_sign_in_path_for(resource)
+    users_options_path
+  end
 end

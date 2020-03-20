@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
-  patch 'users/update'
+  root to: 'pages#home'
+
   post 'blacklist_users/create'
   get 'blacklist_users/edit'
   get 'blacklist_users/learn'
+
   devise_for :users
-  root to: 'pages#home'
+  get 'users/options'
+  patch 'users/update'
+
   get 'dashboard', to: "pages#dashboard", as: :dashboard
   get 'blockedwebsite', to: 'pages#blockedwebsite', as: :blockedwebsite
   get 'forms', to: "pages#forms", as: :forms
@@ -12,6 +16,8 @@ Rails.application.routes.draw do
   resources :flashcards, only: [:show]
   resources :flashcard_users, only: [:create]
   resources :blacklists, only: [:destroy, :create]
+
+
 
   namespace :api, defaults: { format: :json } do
     namespace :v1 do

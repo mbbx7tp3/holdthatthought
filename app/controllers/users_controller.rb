@@ -16,4 +16,8 @@ class UsersController < ApplicationController
       return
     end
   end
+
+  def options
+    @user = current_user
+  end
 end
