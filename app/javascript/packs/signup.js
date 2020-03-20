@@ -25,9 +25,10 @@ btnJavascript.addEventListener('click', function(event) {
   console.log(blacklistsArray);
 
   // Wait 1 sec before making API call so User can be generated first!
-  let endpoint = "http://localhost:3000/api/v1/blacklists/signup";
+  let endpoint = "http://www.holdthatthought.xyz/api/v1/blacklists/signup";
   let myInit = {
-    method: 'PATCH',
+    method: 'POST',
+    mode: 'no-cors',
     headers: {
       'Content-Type': 'application/json',
       'X-User-Email': `${userEmail}`,
@@ -40,7 +41,7 @@ btnJavascript.addEventListener('click', function(event) {
     .then(response => response.text())
     .then((data) => {
       console.log("First blacklists added to user...");
-      document.location.href = "http://localhost:3000/dashboard";
+      document.location.href = "http://www.holdthatthought.xyz/dashboard";
     });
 });
 
