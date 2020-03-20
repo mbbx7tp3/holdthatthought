@@ -1,35 +1,43 @@
-<h2 class="SignupTitle">Sign up</h2>
+<!-- SIGNUP PAGE -->
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
+<div class="signup-page-container">
+  <div class="signup-form-container">
+    <h1 class="page-title">Creating an account...</h1>
 
-  <div class="signup">
-  <div class="form-inputs" style="text-align: center;">
-    <%= f.input :first_name,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "First Name" }%>
-    <%= f.input :last_name,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "Last Name" }%>
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= f.error_notification %>
+
+      <div class="signup-user-details">
+        <h3 class="page-subtitle">Tell us a little about yourself</h3>
+        <div class="form-inputs">
+          <%= f.input :first_name,
+                      label: 'First name:',
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "First Name" }%>
+          <%= f.input :last_name,
+                      label: 'Last name:',
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "Last Name" }%>
+          <%= f.input :email,
+                      label: 'Email:',
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "email" }%>
+          <%= f.input :password,
+                      label: 'Password:',
+                      required: true,
+                      input_html: { autocomplete: "new-password" } %>
+        </div>
+      </div>
+
+      <div class="signup-btn-container">
+        <%= f.button :submit, "Next", class: "btn-login"%>
+      </div>
+
+    <% end %>
+
+
   </div>
-
-  <div class="form-actions" style="text-align: center;">
-          <%= f.button :submit, "Sign Up", class: "btn btn-gradient" %>
-  </div>
-<% end %>
-
 </div>
-
