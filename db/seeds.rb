@@ -7,33 +7,37 @@ Flashcard.destroy_all
 Category.destroy_all
 Blacklist.destroy_all
 
-# User.create!(
-#   first_name: "Jonas",
-#   last_name: "Vanbuel",
-#   email: 'jonas.vanbuel@gmail.com',
-#   password: 'holdthatthought',
-#   password_confirmation: 'holdthatthought')
+User.create!(
+  first_name: "Jonas",
+  last_name: "Vanbuel",
+  email: 'jonas.vanbuel@gmail.com',
+  password: 'holdthatthought',
+  password_confirmation: 'holdthatthought',
+  interest: "Le Wagon")
 
 User.create!(
   first_name: "Jamie",
   last_name: "Reynolds",
   email: 'jamie.s.a.reynolds@gmail.com',
   password: 'holdthatthought',
-  password_confirmation: 'holdthatthought')
+  password_confirmation: 'holdthatthought',
+  interest: "Le Wagon")
 
 User.create!(
   first_name: "Sophie",
   last_name: "Archer",
   email: 'hello@sophiearcher.co.uk',
   password: 'holdthatthought',
-  password_confirmation: 'holdthatthought')
+  password_confirmation: 'holdthatthought',
+  interest: "Le Wagon")
 
 User.create!(
   first_name: "Tom",
   last_name: "Poulter",
   email: 'tom_poulter_02@hotmail.com',
   password: 'holdthatthought',
-  password_confirmation: 'holdthatthought')
+  password_confirmation: 'holdthatthought',
+  interest: "Le Wagon")
 
 
 puts "Created 4 users..."

@@ -13,7 +13,7 @@ class PagesController < ApplicationController
     @user = current_user
     @blacklists = @user.blacklists
     @blacklist = Blacklist.new
-    @learning_topic = @user.interest
+    @learning_topic = "Le Wagon"
   end
 
   def forms
