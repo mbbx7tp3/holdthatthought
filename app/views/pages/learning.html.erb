@@ -1,0 +1,17 @@
+<div class="new-blacklist-page-container">
+
+  <div class="new-blacklist-form">
+
+    <h3 class="page-subtitle">Add another learning topic</h3>
+
+      <%= simple_form_for @blacklist, url: blacklists_path, method: :post do |f| %>
+
+        <div class="form-inputs">
+          <%= f.input :website_name, required: true, autofocus: true, label: "Name" %>
+          <%= f.button :submit, "Blacklist website", class: "btn-ghost" %>
+        </div>
+      <% end %>
+
+  </div>
+
+</div>
