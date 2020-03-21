@@ -18,13 +18,15 @@ class Api::V1::BlacklistsController < Api::V1::BaseController
 
     user = User.find_by(email: user_email, authentication_token: user_token)
 
+    # Working!!!
     if user
       # blacklist_id = request.env["HTTP_X_BLACKLIST_ID"]
       website_name = request.env["HTTP_X_BLACKLIST_NAME"]
       website_url = request.env["HTTP_X_BLACKLIST_URL"]
 
-      # TO DO: CHECK IF WEBSITE_NAME ALREADY EXISTS
+      # .where returning an array
       existing_blacklist = Blacklist.where(website_name: website_name)
+
 
       unless existing_blacklist[0]
 
@@ -45,17 +47,21 @@ class Api::V1::BlacklistsController < Api::V1::BaseController
 
       else
 
-        # binding.pry
+        BlacklistUser.create(user: User.find(user.id), blacklist: Blacklist.find(existing_blacklist[0].id))
 
         # If Blacklist already exists
         # Check if BlacklistUser already exists
-        existing_blacklist_user = BlacklistUser.where(user: user, blacklist: existing_blacklist)
+        # existing_blacklist_user = BlacklistUser.where(user: user, blacklist: existing_blacklist)
 
-        unless existing_blacklist_user
+
+        # if existing_blacklist_user.length === 0
           # If BlacklistUser doesn't yet exist
           # Create new BlacklistUser
-          BlacklistUser.create(user_id: user.id, blacklist_id: new_blacklist.id)
-        end
+          # new_blacklist_user = BlacklistUser.create(user_id: user.id, blacklist_id: new_blacklist.id)
+          # binding.pry
+
+          # new_blacklist_user.save
+        # end
 
         # Return updated list of blacklists
         blacklist_user_all = BlacklistUser.where(user_id: user.id)
