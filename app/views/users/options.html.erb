@@ -3,35 +3,36 @@
     <h1 class="page-title">Creating your account...</h1>
 
       <input type="hidden" id="user_email" value='<%= @user.email %>'>
+      <div>
+        <div class="signup-learning-options">
+          <h3 class="page-subtitle">Select your first learning topic</h3>
+          <div class="form-option learning">
+            <p>Le Wagon</p>
+          </div>
+          <div class="form-option learning">
+            <p>Duolingo</p>
+          </div>
+          <div class="form-option learning">
+            <p>Elevate</p>
+          </div>
+        </div>
 
-      <div class="signup-learning-options">
-        <h3 class="page-subtitle">Select your first learning topic</h3>
-        <div class="form-option learning">
-          <p>Le Wagon</p>
-        </div>
-        <div class="form-option learning">
-          <p>Duolingo</p>
-        </div>
-        <div class="form-option learning">
-          <p>Elevate</p>
+        <div class="signup-blacklist-options">
+          <h3 class="page-subtitle">Select some websites you'd like to blacklist</h3>
+          <div class="form-option blacklist">
+            <p>Facebook.com</p>
+          </div>
+          <div class="form-option blacklist">
+            <p>Instagram.com</p>
+          </div>
+          <div class="form-option blacklist">
+            <p>Twitter.com</p>
+          </div>
         </div>
       </div>
 
-      <div class="signup-blacklist-options">
-        <h3 class="page-subtitle">Select some websites you'd like to blacklist</h3>
-        <div class="form-option blacklist">
-          <p>Facebook.com</p>
-        </div>
-        <div class="form-option blacklist">
-          <p>Instagram.com</p>
-        </div>
-        <div class="form-option blacklist">
-          <p>Twitter.com</p>
-        </div>
-      </div>
-
-      <div class="form-actions signup-btn-container">
-        <a href="/dashboard" class="btn-ghost btn-js"><p>Sign up</p></a>
+      <div class="signup-create">
+        <a href="/dashboard" class="btn-ghost"> Sign Up </a>
       </div>
 
   </div>
