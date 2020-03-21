@@ -34,33 +34,42 @@
  </div>
 </section>
 
+
 <!-- blacklist form -->
 
-<div class= "container" id="form-2" style= "display: none; transition: all 5s ease; margin-bottom: 30px; text-align: center;">
+<div class= "container" id="form-2" style= "display:none; transition: all 5s ease; margin-bottom: 30px; text-align: center;">
   <h3 style= "text-align: center; padding-bottom: 40px; padding-top: 150px;">What would you like to avoid?</h3>
+
+<!-- <div class = "row" style= "height: 250px;">
+  <div class= "col" id= "title" style= "padding-bottom: 20px;">
+
+</div> -->
   <%= simple_form_for(@user, url: users_update_path, method: :patch) do |f| %>
-  <div class="form-group" style="display: inline-block;">
-    <input type="hidden" name="user[blacklist_ids][]" value="">
-    <div class="blacklisted-websites-container" style="margin-top: 30px;">
-      <% Blacklist.all.each do |blacklist| %>
-      <div class="blacklist-card" id= "blacklist-card" style="padding-right: 50px; padding-left: 50px">
-        <input type="checkbox" class="hidden" value="<%= blacklist.id %>" name="user[blacklist_ids][]" id="user_blacklist_ids_<%= blacklist.id %>">
-        <label for="user_blacklist_ids_<%= blacklist.id %>">
-          <div class = "blacklist-all">
-            <div class="blacklist-infos">
-              <h2><%= blacklist.name %></h2>
-            </div>
-          </div>
-        </label>
+
+    <div class="form-group">
+      <input type="hidden" name="user[blacklist_ids][]" value="">
+      <div class="blacklist-choices" style="margin-left: 460px !important">
+        <% Blacklist.all.each do |blacklist| %>
+          <input type="checkbox" class="hidden" value="<%= blacklist.id %>" name="user[blacklist_ids][]" id="user_blacklist_ids_<%= blacklist.id %>">
+          <label for="user_blacklist_ids_<%= blacklist.id %>">
+            <div class = "blacklist-all">
+              <div class="blacklist-card" id= "blacklist-card">
+                <%#= image_tag blacklist.image_url, alt: "alttext" %>
+                     <div class="blacklist-infos">
+                    <h2><%= blacklist.name %></h2>
+                  </div>
+              </div>
+           </div>
+         </label>
+        <% end %>
       </div>
-      <% end %>
     </div>
-  </div>
-  <div style="margin-top: 30px;">
     <%= f.submit "Create profile", class: "btn btn-ghost" %>
-    <% end %>
+   <% end %>
   </div>
 </div>
+</div>
+
 
 <!-- swap divs JS function -->
 
