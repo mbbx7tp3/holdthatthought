@@ -26,7 +26,11 @@
     <div class = "textbox" style = "padding: 100px; margin-top: 90px;">
       <h2>Hold That Thought... is a browser extension to remind you to spend a few moments learning a topic of your choice, before allowing you access to the websites you're seeking to avoid</h2>
       <h2 style = "padding-top: 10px; padding-bottom: 100px;">Simply login, manage your list of blacklisted websites and leaning topics online, download our browser extension, and let us do the rest!</h2>
-      <a class= "btn btn-ghost" href="/dashboard">Get Started</a>
+      <% if user_signed_in? %>
+      <a class= "btn btn-ghost" href="https://github.com/jonasvanbuel/holdthatthought-extension" target='_blank'> Download</a>
+      <% else %>
+      <a class= "btn btn-ghost" href="/users/sign_up">Get Started</a>
+      <% end %>
      </div>
   </div>
 
