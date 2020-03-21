@@ -1,27 +1,26 @@
 <div class="dashboard-page-container">
   <div class="dashboard-container">
-  <h2 style="margin-top: 10px;">Edit <%= resource_name.to_s.humanize %></h2>
+  <h2 style="margin-bottom: 30px;">Edit Your Details <%= @user.first_name %> </h2>
 
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
     <%= f.error_notification %>
 
-    <div class="form-inputs">
+    <div class="form-inputs-edit">
 
       <%= f.input :email, required: true, autofocus: true %>
       <%= f.input :first_name, required: true, autofocus: true %>
       <%= f.input :last_name, required: true, autofocus: true %>
-       <%= f.input :photo, as: :file %>
 
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
         <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
       <% end %>
 
       <%= f.input :current_password,
-                  hint: "we need your current password to confirm your changes",
+                  placeholder: "Insert Password to change",
                   required: true,
                   input_html: { autocomplete: "current-password" } %>
 
-      <div class="form-actions">
+      <div style="margin-top: 20px;">
       <%= f.button :submit, "Update",  class: "btn btn-ghost" %>
       </div>
 
@@ -32,23 +31,25 @@
       <% end %>
 
       <%= f.input :password,
-                  hint: "leave it blank if you don't want to change it",
+                  placeholder: "leave it blank if you don't want to change it",
                   required: false,
                   input_html: { autocomplete: "new-password" } %>
       <%= f.input :password_confirmation,
                   required: false,
                   input_html: { autocomplete: "new-password" } %>
 
+      <div style="margin-top: 20px;">
+      <%= f.button :submit, "Change password",  class: "btn btn-ghost" %>
+      </div>
+
+      <% end %>
+
     </div>
 
-    <div class="form-actions">
-      <%= f.button :submit, "Change password",  class: "btn btn-ghost" %>
-    </div>
-  <% end %>
 
   <div>
   <p class="btn btn-ghost" style="margin-top: 20px;"> <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
   </div>
-  <p class="btn btn-ghost"> <%= link_to "Back to my dashboard", :back %> </p>
+  <p class="btn btn-ghost" style="margin-top: 20px;"> <%= link_to "Back to my dashboard", :back %> </p>
   </div>
 </div>
