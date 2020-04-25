@@ -1,7 +1,4 @@
 
-<div style= "height: 60px;">
-</div>
-
 <header class = "video d-flex align-items-center justify-content-center">
   <div class="jumbotron jumbotron-fluid">
     <div class ="overlay">
@@ -19,23 +16,20 @@
   </div>
 </header>
 
-<div style = "background-color: #ffffff; padding: 140px;">
-  <div class = "container htt d-flex align-items-flex-start pt-40">
-  <div class = "container extimg">
-    <%= image_tag "homeimage2.jpg", alt: "alttext" %>
-  </div>
-    <div class = "textbox" style = "padding: 100px; margin-top: 9g0px;">
-      <h2>Hold That Thought... is a browser extension to remind you to spend a few moments learning a topic of your choice, before allowing you access to the websites you're seeking to avoid</h2>
-      <h2 style = "padding-top: 10px; padding-bottom: 100px;">Simply login, manage your list of blacklisted websites and leaning topics online, download our browser extension, and let us do the rest!</h2>
-      <% if user_signed_in? %>
-      <a class= "btn btn-ghost" href="https://github.com/jonasvanbuel/holdthatthought-extension" target='_blank'> Download</a>
-      <% else %>
-      <a class= "btn btn-ghost" href="/users/sign_up">Get Started</a>
-      <% end %>
-     </div>
-  </div>
+<div class="home-bottom">
+    <div class="left-home">
+      <%= image_tag "homeimage2.jpg", alt: "alttext" %>
+    </div>
+    <div class="right-home">
+        <h2>Hold That Thought... is a browser extension to remind you to spend a few moments learning a topic of your choice, before allowing you access to the websites you're seeking to avoid</h2>
+        <h2 style = "padding-top: 10px; padding-bottom: 100px;">Simply login, manage your list of blacklisted websites and leaning topics online, download our browser extension, and let us do the rest!</h2>
+        <% if user_signed_in? %>
+        <a class= "btn btn-ghost" href="https://github.com/jonasvanbuel/holdthatthought-extension" target='_blank'> Download</a>
+        <% else %>
+        <a class= "btn btn-ghost" href="/users/sign_up">Get Started</a>
+        <% end %>
+    </div>
 </div>
-
 
 
 <!--

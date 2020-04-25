@@ -3,6 +3,7 @@
 body {
   // background-color: #ffffff;
   background-color: rgba(240, 239, 239, 1.00);
+  width: 100vw;
   // transition: all 0.5s ease;
 }
 
@@ -79,6 +80,7 @@ section {
 .video {
   position: relative;
   height: calc(100vh - 60px);
+  width: 100vw;
 }
 
 .intro-text {
@@ -174,5 +176,19 @@ section {
   margin-left: 180px;
   border-radius: 5px;
   // width: 800px;
+}
+
+.home-bottom {
+  background-color: #ffffff;
+  display: flex;
+}
+
+.left-home {
+  width: 50%;
+}
+
+.right-home {
+  width: 50%;
+
 }
 
