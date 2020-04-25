@@ -48,7 +48,7 @@
 
     <div class="form-group">
       <input type="hidden" name="user[blacklist_ids][]" value="">
-      <div class="blacklist-choices" style="margin-left: 460px !important">
+      <div class="blacklist-choices" style="margin: auto;">
         <% Blacklist.first(3).each do |blacklist| %>
           <input type="checkbox" class="hidden" value="<%= blacklist.id %>" name="user[blacklist_ids][]" id="user_blacklist_ids_<%= blacklist.id %>">
           <label for="user_blacklist_ids_<%= blacklist.id %>">
