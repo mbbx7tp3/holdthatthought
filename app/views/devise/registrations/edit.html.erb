@@ -47,9 +47,11 @@
     </div>
 
 
-  <div>
-  <p class="btn btn-ghost" style="margin-top: 20px;"> <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-  </div>
-  <p class="btn btn-ghost" style="margin-top: 20px;"> <%= link_to "Back to my dashboard", :back %> </p>
+    <div class="edit-buttons">
+    <p class="btn btn-ghost" style="margin-top: 20px;"> <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+    </div>
+    <div class="edit-buttons">
+    <p class="btn btn-ghost" style="margin-top: 20px;"> <%= link_to "Back to my dashboard", :back %> </p>
+    </div>
   </div>
 </div>
