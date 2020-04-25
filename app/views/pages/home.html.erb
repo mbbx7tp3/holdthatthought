@@ -6,13 +6,15 @@
     </div>
   </div>
   <div class="intro-text">
-   <h1 style="font-size: 50px; margin-bottom: 50px; margin-top: 350px;"> Waste your time productively </h1>
+   <div class="front-title">
+   <h1> Waste your time productively </h1>
     <% if user_signed_in? %>
       <a class= "btn btn-ghost" href="/dashboard">Dashboard</a>
       <a class= "btn btn-ghost" href="https://github.com/jonasvanbuel/holdthatthought-extension" target='_blank'>Download</a>
     <% else %>
       <a class= "btn btn-ghost" href="/users/sign_up">Get Started</a>
     <% end %>
+    </div>
   </div>
 </header>
 
@@ -23,11 +25,13 @@
     <div class="right-home">
         <h2>Hold That Thought... is a browser extension to remind you to spend a few moments learning a topic of your choice, before allowing you access to the websites you're seeking to avoid</h2>
         <h2>Simply login, manage your list of blacklisted websites and leaning topics online, download our browser extension, and let us do the rest!</h2>
+        <div style="text-align: right; padding-top: 20px;">
         <% if user_signed_in? %>
         <a class= "btn btn-ghost" href="https://github.com/jonasvanbuel/holdthatthought-extension" target='_blank'> Download</a>
         <% else %>
         <a class= "btn btn-ghost" href="/users/sign_up">Get Started</a>
         <% end %>
+        </div>
     </div>
 </div>
 

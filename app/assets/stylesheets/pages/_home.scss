@@ -84,10 +84,8 @@ section {
 }
 
 .intro-text {
-  height: 100vh;
   color: #192965;
   z-index: 1000;
-  position: absolute;
   opacity: 1;
   padding: 50px;
   // text-shadow: 0px 0px 4px rgba(0,0,0,0.2);
@@ -181,6 +179,7 @@ section {
 .home-bottom {
   background-color: #ffffff;
   display: flex;
+  padding-bottom: 20px;
 }
 
 .left-home {
@@ -194,7 +193,40 @@ section {
   padding-right: 2%;
 }
 
-.right-home h2 {
-  font-size: 1rem;
+ .left-home img {
+  width: 100%;
+  height: auto;
+ }
+
+
+@media screen and (max-width: 1200px) {
+  .right-home h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .right-home h2 {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .right-home h2 {
+    font-size: 1rem;
+  }
+}
+
+
+@media screen and (max-width: 720px) {
+  .front-title h1 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 721px) {
+  .front-title h1 {
+    font-size: 3rem;
+  }
 }
 
