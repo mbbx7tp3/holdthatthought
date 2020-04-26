@@ -3,20 +3,27 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 60px;
+  height: 80px;
   padding: 0px 30px;
   color: rgba(0,0,0,0.3);
 }
+
+.footer-content {
+  display: flex;
+  float: right;
+}
+
 .footer-links {
   display: flex;
-  align-items: center;
 }
 .footer-links a {
+  text-align: right;
   color: black;
   opacity: 0.15;
   text-decoration: none;
   font-size: 24px;
   padding: 0px 10px;
+  text-decoration: none;
 }
 .footer-links a:hover {
   opacity: 1;
