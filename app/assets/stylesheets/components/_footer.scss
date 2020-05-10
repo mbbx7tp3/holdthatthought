@@ -1,3 +1,10 @@
+.footer-container {
+  // clear: both;
+  // min-height: 65%;
+  // margin-top: -65px;
+  // // position: relative;
+}
+
 .footer {
   background: #F4F4F4;
   display: flex;
@@ -6,6 +13,7 @@
   height: 65px;
   padding: 0px 30px;
   color: rgba(0,0,0,0.3);
+  width: 100%;
 }
 
 .footer-content {
