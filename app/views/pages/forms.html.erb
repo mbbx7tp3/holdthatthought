@@ -36,7 +36,8 @@
 
 
 <!-- blacklist form -->
-
+<%
+=begin %>
 <div class= "container" id="form-2" style= "display:none; transition: all 5s ease; margin-bottom: 30px; text-align: center;">
   <h3 style= "text-align: center; padding-bottom: 40px; padding-top: 150px;">What would you like to avoid?</h3>
 
@@ -66,6 +67,47 @@
   </div>
 </div>
 </div>
+<%
+=end %>
+
+
+
+
+<!-- test blacklist form -->
+
+  <div id -= "form-2" >
+    <div class= "form-2 align-items-center" id= "form-2" style = "padding-top: 150px; margin-bottom: 30px;">
+      <div>
+        <h3>What would you like to avoid?</h3>
+      </div>
+      <div class= "card-container">
+        <div class="card-product" id="card" >
+          <%= image_tag "instagram.png", alt: "alttext" %>
+          <div class="card-product-infos">
+            <h2>Instagram</h2>
+            <!-- <p>Change your life, learn to code</p> -->
+          </div>
+        </div>
+        <div class="card-product" id="card">
+          <%= image_tag "facebook.png", alt: "alttext" %>
+          <div class="card-product-infos">
+            <h2>Facebook</h2>
+            <!-- <p>The worlds best way to learn a language</p> -->
+          </div>
+        </div>
+        <div class="card-product" id="card">
+          <%= image_tag "bbcnews.png", alt: "alttext" %>
+          <div class="card-product-infos">
+            <h2>BBC News</h2>
+            <!-- <p>Stay sharp, build confidence, and boost productivity</p> -->
+          </div>
+        </div>
+      </div>
+     <!--  <div class= "arrow">
+        <a href="javascript:SwapDivsWithClick('form-1','form-2')" class="fas fa-arrow-right"></a>
+      </div> -->
+    </div>
+ </div>
 
 
 <!-- swap divs JS function -->
