@@ -34,48 +34,9 @@
  </div>
 </section>
 
+<!-- new blacklist form -->
 
-<!-- blacklist form -->
-<%
-=begin %>
 <div class= "container" id="form-2" style= "display:none; transition: all 5s ease; margin-bottom: 30px; text-align: center;">
-  <h3 style= "text-align: center; padding-bottom: 40px; padding-top: 150px;">What would you like to avoid?</h3>
-
-</div> -->
-  <%= simple_form_for(@user, url: users_update_path, method: :patch) do |f| %>
-
-    <div class="form-group">
-      <input type="hidden" name="user[blacklist_ids][]" value="">
-      <div class="blacklist-choices" style="margin: auto;">
-        <% Blacklist.first(3).each do |blacklist| %>
-          <input type="checkbox" class="hidden" value="<%= blacklist.id %>" name="user[blacklist_ids][]" id="user_blacklist_ids_<%= blacklist.id %>">
-          <label for="user_blacklist_ids_<%= blacklist.id %>">
-            <div class = "blacklist-all">
-              <div class="blacklist-card" id= "blacklist-card">
-                <%#= image_tag blacklist.image_url, alt: "alttext" %>
-                     <div class="blacklist-infos">
-                    <h2><%= blacklist.name %></h2>
-                  </div>
-              </div>
-           </div>
-         </label>
-        <% end %>
-      </div>
-    </div>
-    <%= f.submit "Create profile", class: "btn btn-ghost" %>
-   <% end %>
-  </div>
-</div>
-</div>
-<%
-=end %>
-
-
-
-
-<!-- test blacklist form -->
-
-  <div id -= "form-2" >
     <div class= "form-2 align-items-center" id= "form-2" style = "padding-top: 150px; margin-bottom: 30px;">
       <div>
         <h3>What would you like to avoid?</h3>
@@ -103,11 +64,10 @@
           </div>
         </div>
       </div>
-     <!--  <div class= "arrow">
-        <a href="javascript:SwapDivsWithClick('form-1','form-2')" class="fas fa-arrow-right"></a>
-      </div> -->
+
     </div>
- </div>
+</div>
+
 
 
 <!-- swap divs JS function -->
